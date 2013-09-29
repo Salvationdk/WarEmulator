@@ -1,0 +1,3 @@
+C:\Users\FN\Documents\GitHub\WarEmulator\Trunk\Launcher\obj\Release\Launcher.Accueil.resources
+C:\Users\FN\Documents\GitHub\WarEmulator\Trunk\Launcher\obj\Release\Launcher.Properties.Resources.resources
+C:\Users\FN\Documents\GitHub\WarEmulator\Trunk\Launcher\obj\Release\Launcher.csproj.GenerateResource.Cache
