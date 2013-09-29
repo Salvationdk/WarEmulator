@@ -1,0 +1,6 @@
+C:\Users\FN\Documents\GitHub\WarEmulator\FrameWork\bin\Debug\FrameWork.dll
+C:\Users\FN\Documents\GitHub\WarEmulator\FrameWork\bin\Debug\FrameWork.pdb
+C:\Users\FN\Documents\GitHub\WarEmulator\FrameWork\bin\Debug\MySql.Data.dll
+C:\Users\FN\Documents\GitHub\WarEmulator\FrameWork\obj\Debug\FrameWork.csprojResolveAssemblyReference.cache
+C:\Users\FN\Documents\GitHub\WarEmulator\FrameWork\obj\Debug\FrameWork.dll
+C:\Users\FN\Documents\GitHub\WarEmulator\FrameWork\obj\Debug\FrameWork.pdb
