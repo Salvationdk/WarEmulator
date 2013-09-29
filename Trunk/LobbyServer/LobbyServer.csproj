@@ -55,6 +55,9 @@
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FrameWork">
+      <HintPath>..\..\FrameWork\bin\Release\FrameWork.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -78,10 +81,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\FrameWork\FrameWork.csproj">
-      <Project>{D5C98F3A-D5D2-4AED-A5A7-06D2DE095095}</Project>
-      <Name>FrameWork</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{8BC085CD-429B-41D1-BB47-9621FD32EC23}</Project>
       <Name>Common</Name>

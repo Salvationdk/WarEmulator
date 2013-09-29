@@ -3,3 +3,4 @@ C:\Users\FN\Documents\GitHub\WarEmulator\FrameWork\bin\Release\FrameWork.pdb
 C:\Users\FN\Documents\GitHub\WarEmulator\FrameWork\bin\Release\MySql.Data.dll
 C:\Users\FN\Documents\GitHub\WarEmulator\FrameWork\obj\Release\FrameWork.dll
 C:\Users\FN\Documents\GitHub\WarEmulator\FrameWork\obj\Release\FrameWork.pdb
+C:\Users\FN\Documents\GitHub\WarEmulator\FrameWork\obj\Release\FrameWork.csprojResolveAssemblyReference.cache

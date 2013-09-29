@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldServer", "WorldServer\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerLauncher", "ServerLauncher\ServerLauncher.csproj", "{391C546A-4DFB-4A9D-A3DF-419128D308A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrameWork", "..\..\FrameWork\FrameWork.csproj", "{D5C98F3A-D5D2-4AED-A5A7-06D2DE095095}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrameWork", "..\FrameWork\FrameWork.csproj", "{D5C98F3A-D5D2-4AED-A5A7-06D2DE095095}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
