@@ -24,7 +24,7 @@ using System.Text;
 using System.Security.Cryptography;
 
 using FrameWork;
-
+using Google.ProtocolBuffers;
 namespace Common
 {
     public enum AuthResult
@@ -76,6 +76,7 @@ namespace Common
 
             return true;
         }
+
         public Account GetAccount(string Username)
         {
             Username = Username.ToLower();
@@ -146,22 +147,33 @@ namespace Common
                 return "ERREUR";
             }
 
-            string Token = Guid.NewGuid().ToString();
+            /*string Token = Guid.NewGuid().ToString();
             if (Token.Length <= 34)
             {
                 for (int i = Token.Length; i < 34; ++i)
                     Token += "X";
             }
             else Token = Token.Substring(0, 34);
-
-            Acct.Token = Token;
             
+            Acct.Token = Token;
+            */
+
+            var md5bytes = new byte[16];
+            using (var rng = new RNGCryptoServiceProvider())
+            {
+                rng.GetBytes(md5bytes);
+            }
+
+            string Token = BitConverter.ToString(md5bytes).Replace("-", "");
+            Acct.Token = Token;
+
             Log.Debug("GenerateToken",Acct.Token);
             
             Database.SaveObject(Acct);
 
             return Acct.Token;
         }
+
         public AuthResult CheckToken(string Username, string Token)
         {
             Username = Username.ToLower();
@@ -172,8 +184,14 @@ namespace Common
 
             if (Acct.Token != Token)
                 return AuthResult.AUTH_ACCT_BAD_USERNAME_PASSWORD;
-
+            
             return AuthResult.AUTH_SUCCESS;
+        }
+
+        public ResultCode CheckToken(string Token)
+        {
+            //
+            return ResultCode.RES_SUCCESS;
         }
 
         #endregion
@@ -250,78 +268,69 @@ namespace Common
             Rm.OrderCount = OrderCount;
             Rm.DestructionCount = DestructionCount;
         }
-        public byte[] BuildRealms(uint sequence)
+
+        private ClusterProp setProp(string name, string value)
         {
-            try
-            {
-                PacketOut Out = new PacketOut((byte)0);
-                Out.Position = 0;
-
-                Out.WriteUInt32(sequence);
-                Out.WriteUInt16(0);
-                lock (_Realms)
-                {
-                    Log.Info("BuildRealm", "Sending " + _Realms.Count + " realm(s)");
-                    Out.WriteUInt32((uint)_Realms.Count);
-
-                    foreach (Realm Rm in _Realms.Values)
-                    {
-                        Out.WriteByte(Rm.RealmId);
-                        Out.WriteByte((byte)(Rm.Info != null ? 1 : 0));
-                        Out.WriteUInt32(1);
-                        Out.WriteByte(Rm.RealmId);
-                        Out.WriteByte(Rm.RealmId);
-                        Out.WriteString("[" + Rm.Language + "] " + Rm.Name);
-                        Out.WriteUInt32(19);
-                        Out.WriteString("setting.allow_trials");
-                        Out.WriteString(Rm.AllowTrials);
-                        Out.WriteString("setting.charxferavailable");
-                        Out.WriteString(Rm.CharfxerAvailable);
-                        Out.WriteString("setting.language");
-                        Out.WriteString(Rm.Language);
-                        Out.WriteString("setting.legacy");
-                        Out.WriteString(Rm.Legacy);
-                        Out.WriteString("setting.manualbonus.realm.destruction");
-                        Out.WriteString(Rm.BonusDestruction);
-                        Out.WriteString("setting.manualbonus.realm.order");
-                        Out.WriteString(Rm.BonusOrder);
-                        Out.WriteString("setting.name");
-                        Out.WriteString(Rm.Name);
-                        Out.WriteString("setting.net.address");
-                        Out.WriteString(Rm.Adresse);
-                        Out.WriteString("setting.net.port");
-                        Out.WriteString(Rm.Port.ToString());
-                        Out.WriteString("setting.redirect");
-                        Out.WriteString(Rm.Redirect);
-                        Out.WriteString("setting.region");
-                        Out.WriteString(Rm.Region);
-                        Out.WriteString("setting.retired");
-                        Out.WriteString(Rm.Retired);
-                        Out.WriteString("status.queue.Destruction.waiting");
-                        Out.WriteString(Rm.WaitingDestruction);
-                        Out.WriteString("status.queue.Order.waiting");
-                        Out.WriteString(Rm.WaitingOrder);
-                        Out.WriteString("status.realm.destruction.density");
-                        Out.WriteString(Rm.DensityDestruction);
-                        Out.WriteString("status.realm.order.density");
-                        Out.WriteString(Rm.DensityOrder);
-                        Out.WriteString("status.servertype.openrvr");
-                        Out.WriteString(Rm.OpenRvr);
-                        Out.WriteString("status.servertype.rp");
-                        Out.WriteString(Rm.Rp);
-                        Out.WriteString("status.status");
-                        Out.WriteString(Rm.Status);
-                    }
-                }
-                Out.WriteUInt32(0);
-
-                return Out.ToArray();
-            }
-            catch
-            {
-                return new byte[0];
-            }
+            return ClusterProp.CreateBuilder().SetPropName(name)
+                                              .SetPropValue(value)
+                                              .Build();
         }
+        public byte[] BuildClusterList()
+        {
+       
+            GetClusterListReply.Builder ClusterListReplay = GetClusterListReply.CreateBuilder();
+
+            lock (_Realms)
+            {
+                Log.Info("BuildRealm", "Sending " + _Realms.Count + " realm(s)");
+
+                ClusterInfo.Builder cluster = ClusterInfo.CreateBuilder();
+                foreach (Realm Rm in _Realms.Values)
+                {
+                    cluster.SetClusterId(Rm.RealmId)
+                           .SetClusterName(Rm.Name)
+                           .SetLobbyHost(Rm.Adresse)
+                           .SetLobbyPort((uint)Rm.Port)
+                           .SetLanguageId(0)
+                           .SetMaxClusterPop(500)
+                           .SetClusterPopStatus(ClusterPopStatus.POP_UNKNOWN)
+                           .SetClusterStatus(ClusterStatus.STATUS_ONLINE);
+
+                    cluster.AddServerList(
+                        ServerInfo.CreateBuilder().SetServerId(Rm.RealmId)
+                                                  .SetServerName(Rm.Name)
+                                                  .Build());
+
+                    cluster.AddPropertyList(setProp("setting.allow_trials", Rm.AllowTrials));
+                    cluster.AddPropertyList(setProp("setting.charxferavailable", Rm.CharfxerAvailable));
+                    cluster.AddPropertyList(setProp("setting.language", Rm.Language));
+                    cluster.AddPropertyList(setProp("setting.legacy", Rm.Legacy));
+                    cluster.AddPropertyList(setProp("setting.manualbonus.realm.destruction", Rm.BonusDestruction));
+                    cluster.AddPropertyList(setProp("setting.manualbonus.realm.order", Rm.BonusOrder));
+                    cluster.AddPropertyList(setProp("setting.min_cross_realm_account_level", "0"));
+                    cluster.AddPropertyList(setProp("setting.name", Rm.Name));
+                    cluster.AddPropertyList(setProp("setting.net.address", Rm.Adresse.ToString()));
+                    cluster.AddPropertyList(setProp("setting.net.port", Rm.Port.ToString()));
+                    cluster.AddPropertyList(setProp("setting.redirect", Rm.Redirect));
+                    cluster.AddPropertyList(setProp("setting.region", Rm.Region));
+                    cluster.AddPropertyList(setProp("setting.retired", Rm.Retired));
+                    cluster.AddPropertyList(setProp("status.queue.Destruction.waiting", Rm.WaitingDestruction));
+                    cluster.AddPropertyList(setProp("status.queue.Order.waiting", Rm.WaitingOrder));
+                    cluster.AddPropertyList(setProp("status.realm.destruction.density", Rm.DensityDestruction));
+                    cluster.AddPropertyList(setProp("status.realm.order.density", Rm.DensityOrder));
+                    cluster.AddPropertyList(setProp("status.servertype.openrvr", Rm.OpenRvr));
+                    cluster.AddPropertyList(setProp("status.servertype.rp", Rm.Rp));
+                    cluster.AddPropertyList(setProp("status.status", Rm.Status));
+                    cluster.Build();
+                    ClusterListReplay.AddClusterList(cluster);
+                }
+            }
+            ClusterListReplay.ResultCode = ResultCode.RES_SUCCESS;
+            return ClusterListReplay.Build().ToByteArray();
+
+        }
+
+
         public override void  OnClientDisconnected(RpcClientInfo Info)
         {
             Realm Rm = GetRealmByRpc(Info.RpcID);

@@ -55,8 +55,12 @@
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FrameWork">
-      <HintPath>..\..\FrameWork\bin\Release\FrameWork.dll</HintPath>
+    <Reference Include="FrameWork, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FrameWork\bin\Release\FrameWork.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.ProtocolBuffers">
+      <HintPath>E:\PrivateServer\protobuf\protobuf-csharp-port-2.4.1.521-source(r523)\protobuf-csharp-port-2.4.1.521-source(r523)\Release\Google.ProtocolBuffers.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">

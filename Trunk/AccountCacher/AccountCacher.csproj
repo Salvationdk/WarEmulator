@@ -55,8 +55,9 @@
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FrameWork">
-      <HintPath>..\..\FrameWork\bin\Release\FrameWork.dll</HintPath>
+    <Reference Include="FrameWork, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FrameWork\bin\Release\FrameWork.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">

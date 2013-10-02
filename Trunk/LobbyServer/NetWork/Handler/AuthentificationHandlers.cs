@@ -24,44 +24,69 @@ using System.Text;
 
 using Common;
 using FrameWork;
+using Google.ProtocolBuffers;
 
 namespace LobbyServer.NetWork.Handler
 {
+
     public class AuthentificationHandlers : IPacketHandler
     {
-        [PacketHandlerAttribute(PacketHandlerType.TCP, (int)Opcodes.CMSG_CONNECT, 0, "onConnect")]
-        static public void CMSG_CONNECT(BaseClient client, PacketIn packet)
+
+        [PacketHandlerAttribute(PacketHandlerType.TCP, (int)Opcodes.CMSG_VerifyProtocolReq, 0, "onVerifyProtocolReq")]
+        static public void CMSG_VerifyProtocolReq(BaseClient client, PacketIn packet)
         {
             Client cclient = client as Client;
 
-            UInt32 sequence = packet.GetUint32();
-            UInt32 unk = packet.GetUint32();
+            PacketOut Out = new PacketOut((byte)Opcodes.SMSG_VerifyProtocolReply);
 
-            PacketOut Out = new PacketOut((byte)Opcodes.SMSG_CONNECT_RESPONSE);
-            Out.WriteUInt32(sequence);
-            Out.WriteUInt16(0);
-            Out.WriteUInt32(unk);
+            byte[] IV_HASH1 = { 0x01, 0x53, 0x21, 0x4d, 0x4a, 0x04, 0x27, 0xb7, 0xb4, 0x59, 0x0f, 0x3e, 0xa7, 0x9d, 0x29, 0xe9 };
+            byte[] IV_HASH2 = { 0x49, 0x18, 0xa1, 0x2a, 0x64, 0xe1, 0xda, 0xbd, 0x84, 0xd9, 0xf4, 0x8a, 0x8b, 0x3c, 0x27, 0x20 };
+            
+            ByteString iv1 = ByteString.CopyFrom(IV_HASH1);
+            ByteString iv2 = ByteString.CopyFrom(IV_HASH2);
+            VerifyProtocolReply.Builder verify = VerifyProtocolReply.CreateBuilder();
+            verify.SetResultCode(VerifyProtocolReply.Types.ResultCode.RES_SUCCESS);
+
+            verify.SetIv1(ByteString.CopyFrom(IV_HASH1));
+            verify.SetIv2(ByteString.CopyFrom(IV_HASH2));
+
+
+            
+            Out.Write(verify.Build().ToByteArray());
+   
 
             cclient.SendTCPCuted(Out);
+
         }
 
-        [PacketHandlerAttribute(PacketHandlerType.TCP, (int)Opcodes.CMSG_AUTHENTICATE, 0, "onAuthenticate")]
-        static public void CMSG_AUTHENTICATE(BaseClient client, PacketIn packet)
+        [PacketHandlerAttribute(PacketHandlerType.TCP, (int)Opcodes.CMSG_AuthSessionTokenReq, 0, "onAuthSessionTokenReq")]
+        static public void CMSG_AuthSessionTokenReq(BaseClient client, PacketIn packet)
         {
             Client cclient = client as Client;
 
-            UInt32 Sequence = packet.GetUint32();
-            string Username = packet.GetString();
-            string Token = packet.GetString();
+            PacketOut Out = new PacketOut((byte)Opcodes.SMSG_AuthSessionTokenReply);
+        
 
-            AuthResult Result = Program.AcctMgr.CheckToken(Username, Token);
+            AuthSessionTokenReq.Builder authReq = AuthSessionTokenReq.CreateBuilder();
+            authReq.MergeFrom(packet.ToArray());
 
-            PacketOut Out = new PacketOut((byte)Opcodes.SMSG_AUTHENTICATE_RESPONSE);
-            Out.WriteUInt32(Sequence);
-            Out.WriteUInt16((UInt16)Result);
-            Out.WriteByte(0);
+            string session = Encoding.ASCII.GetString(authReq.SessionToken.ToByteArray());
+            Log.Debug("AuthSession", "session " + session);
+            cclient.Username = "";                                  //username is not important anymore in 1.4.8
+            cclient.Token = session;
+
+
+
+            AuthSessionTokenReply.Builder authReply = AuthSessionTokenReply.CreateBuilder();
+            authReply.SetResultCode(AuthSessionTokenReply.Types.ResultCode.RES_SUCCESS);
+
+          
+            Out.Write(authReply.Build().ToByteArray());
 
             cclient.SendTCPCuted(Out);
+       
+            
+        /*   need to check
 
             if (Result != AuthResult.AUTH_SUCCESS)
                 cclient.Disconnect();
@@ -69,54 +94,54 @@ namespace LobbyServer.NetWork.Handler
             {
                 cclient.Username = Username;
                 cclient.Token = Token;
-            }
+            }*/
         }
 
-        [PacketHandlerAttribute(PacketHandlerType.TCP, (int)Opcodes.CMSG_LOGIN_CLEARANCE, 0, "onLoginClearance")]
-        static public void CMSG_LOGIN_CLEARANCE(BaseClient client, PacketIn packet)
+        [PacketHandlerAttribute(PacketHandlerType.TCP, (int)Opcodes.CMSG_GetAcctPropListReq, 0, "onAcctPropListReq")]
+        static public void CMSG_GetAcctPropListReq(BaseClient client, PacketIn packet)
+        {
+            Client cclient = client as Client;
+            Log.Debug("GetAcctProp", "recv");
+
+
+            PacketOut Out = new PacketOut((byte)Opcodes.SMSG_GetAcctPropListReply);
+            byte[] val = { 0x08, 0x00 };
+            Out.Write(val);
+            cclient.SendTCPCuted(Out);
+            Log.Debug("GetAcctProp", "sent");
+        }
+
+
+
+        [PacketHandlerAttribute(PacketHandlerType.TCP, (int)Opcodes.CMSG_MetricEventNotify, 0, "onMetricEventNotify")]
+        static public void CMSG_MetricEventNotify(BaseClient client, PacketIn packet)
+        {
+            //do nothing
+        }
+
+
+        [PacketHandlerAttribute(PacketHandlerType.TCP, (int)Opcodes.CMSG_GetClusterListReq, 0, "onGetServerListReq")]
+        static public void CMSG_GetClusterListReq(BaseClient client, PacketIn packet)
+        {
+            Client cclient = client as Client;
+            PacketOut Out = new PacketOut((byte)Opcodes.SMSG_GetClusterListReply);
+            byte[] ClustersList = Program.AcctMgr.BuildClusterList();
+
+            Out.Write(ClustersList);
+            cclient.SendTCPCuted(Out);
+
+        }
+        [PacketHandlerAttribute(PacketHandlerType.TCP, (int)Opcodes.CMSG_GetCharSummaryListReq, 1, "onGetCharacterSummaries")]
+        static public void CMSG_GetCharSummaryListReq(BaseClient client, PacketIn packet)
         {
             Client cclient = client as Client;
 
-            UInt32 sequence = packet.GetUint32();
 
-            PacketOut Out = new PacketOut((byte)Opcodes.SMSG_LOGIN_CLEARANCE_RESPONSE);
-            Out.WriteUInt32(sequence);
-            Out.WriteUInt32(0);
-            Out.WriteUInt16(1);
-            Out.WriteUInt16(1);
-            Out.WriteUInt32(1);
+            PacketOut Out = new PacketOut((byte)Opcodes.SMSG_GetCharSummaryListReply);
 
+            Out.Write(new byte[2] { 0x08, 00 });
             cclient.SendTCPCuted(Out);
-        }
-
-        [PacketHandlerAttribute(PacketHandlerType.TCP, (int)Opcodes.CMSG_GET_SERVER_LIST, 0, "onGetServerList")]
-        static public void CMSG_GET_SERVER_LIST(BaseClient client, PacketIn packet)
-        {
-            Client cclient = client as Client;
-
-            uint sequence = packet.GetUint32();
-
-            byte[] Res = Program.AcctMgr.BuildRealms(sequence);
-
-            PacketOut Out = new PacketOut((byte)Opcodes.SMSG_GET_SERVER_LIST_RESPONSE);
-            Out.Write(Res, 0, Res.Length);
-
-            cclient.SendTCPCuted(Out);
-        }
-
-        [PacketHandlerAttribute(PacketHandlerType.TCP, (int)Opcodes.CMSG_GET_CHARACTER_SUMMARIES, 0, "onGetCharacterSummaries")]
-        static public void CMSG_GET_CHARACTER_SUMMARIES(BaseClient client, PacketIn packet)
-        {
-            Client cclient = client as Client;
-
-            uint sequence = packet.GetUint32();
-
-            PacketOut Out = new PacketOut((byte)Opcodes.SMSG_GET_CHARACTER_SUMMARIES_RESPONSE);
-            Out.WriteUInt32(sequence);
-            Out.WriteUInt16(0);
-            Out.WriteUInt16(0); // Character count
-
-            cclient.SendTCPCuted(Out);
+          
         }
     }
 }

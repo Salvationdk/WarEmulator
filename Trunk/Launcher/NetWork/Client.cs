@@ -34,7 +34,7 @@ namespace Launcher
     static public class Client
     {
         static public int Version = 1;
-        static public string IP = "127.0.0.1";
+        static public string IP = "37.110.31.162";
         static public int Port = 8000;
         static public bool Started = false;
 
@@ -418,7 +418,8 @@ namespace Launcher
                             UpdateWarData();
                             Process Pro = new Process();
                             Pro.StartInfo.FileName = "WAR.exe";
-                            Pro.StartInfo.Arguments = " --acctname=" + System.Convert.ToBase64String(ASCIIEncoding.ASCII.GetBytes(User)) + " --authtoken=" + Auth;
+                            Pro.StartInfo.Arguments = " --acctname=" + System.Convert.ToBase64String(ASCIIEncoding.ASCII.GetBytes(User)) + " --sesstoken=" + System.Convert.ToBase64String(ASCIIEncoding.ASCII.GetBytes(Auth));
+                            MessageBox.Show(Auth);
                             Pro.Start();
                             Directory.SetCurrentDirectory(CurrentDir);
                         }
