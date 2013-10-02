@@ -70,7 +70,12 @@ namespace LobbyServer
                         long Diff = EndPos - StartPos;
                         byteLeft -= Diff;
                         if (m_expectSize <= 0)
+                        {
+                            packet.Opcode = packet.GetUint8();
+                            packet.Size = (ulong)m_expectSize;
+                            _srvr.HandlePacket(this, packet);
                             return;
+                        }
 
                         if (byteLeft <= 0)
                             return;
@@ -133,10 +138,64 @@ namespace LobbyServer
             Log.Tcp("Header", Header.ToArray(), 0, Header.Count);
             Log.Tcp("Packet", Packet, 0, Packet.Length);
 
+            Log.Dump("Header", Header.ToArray(), 0, Header.Count);
+            Log.Dump("Packet", Packet, 0, Packet.Length);
+
             SendTCP(Header.ToArray());
             SendTCP(Packet);
 
             Out.Dispose();
+        }
+
+        public void SendSegments(PacketOut Out)
+        {
+            long PSize = Out.Length - Out.OpcodeLen - PacketOut.SizeLen; // Size = Size-len-opcode
+
+            byte[] Packet = new byte[PSize];
+            Out.Position = Out.OpcodeLen + PacketOut.SizeLen;
+            //Out.Read(Packet, 0, (int)(PSize));
+
+            List<byte> Header = new List<byte>(5);
+            int itemcount = 1;
+            while (PSize > 0x7f)
+            {
+                Header.Add((byte)((byte)(PSize) | 0x80));
+                PSize >>= 7;
+                itemcount++;
+                if (itemcount >= Header.Capacity + 10)
+                    Header.Capacity += 10;
+            }
+
+            Header.Add((byte)(PSize));
+            Header.Add((byte)(Out.Opcode));
+
+            Log.Tcp("Header", Header.ToArray(), 0, Header.Count);
+            SendTCP(Header.ToArray());
+
+
+            // ugly needs to fix
+            byte[] buffer;
+            long bytesleft = PSize;
+            int start = 0;
+            while (PSize > 1460)
+            {
+                if (bytesleft < 1460) break;
+
+                 buffer = new byte[(start + 1460) - start];
+                 Out.Read(buffer, start, (start + 1460));
+                 SendTCP(buffer);
+                start += 1461;
+                bytesleft -= 1461;
+            }
+
+            if (bytesleft > 0)
+            {
+                buffer = new byte[(start + bytesleft) - start];
+                Out.Read(buffer, start, (int)(start + bytesleft));
+                SendTCP(buffer);
+            }
+
+
         }
     }
 }
