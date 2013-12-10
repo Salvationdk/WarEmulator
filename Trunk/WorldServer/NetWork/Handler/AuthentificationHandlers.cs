@@ -70,6 +70,9 @@ namespace WorldServer
                     Out.WriteByte(0);
                     Out.WriteUInt16(0);
                     cclient.SendTCP(Out);
+                    
+
+
                 }
             }
         }

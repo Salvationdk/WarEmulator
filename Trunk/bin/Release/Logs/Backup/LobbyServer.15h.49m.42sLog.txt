@@ -1,0 +1,50 @@
+[15:47:02] D RpcClient : Connect : 127.0.0.1:6800
+[15:47:02] D RpcClient : Connecting to : 127.0.0.1
+[15:47:02] D RpcClient : Listening on : 127.0.0.1:6001
+[15:47:02] D RpcClient : Registering handlers
+[15:47:02] D RpcClient : Registering : ClientMgr
+[15:47:02] N ClientMgr : [-1942177661]	| LauncherServer| 127.0.0.1:6002 | Connected
+[15:47:02] S RpcClient : Connected to : 127.0.0.1:6800, Listen on : 127.0.0.1:6001
+[15:47:02] N ClientMgr : [-1942177661]	| LauncherServer| 127.0.0.1:6002 | Connected
+[15:47:02] N ClientMgr : Server connected !
+[15:47:02] I TCPManager : Starting...
+[15:47:02] D TCPManager : Allocation of the buffer pool : 300
+[15:47:02] I TCPManager : Loading the Packet Handler
+[15:47:02] D TCPManager : Registering handler for opcode : 00000001
+[15:47:02] D TCPManager : Registering handler for opcode : 00000005
+[15:47:02] D TCPManager : Registering handler for opcode : 0000000D
+[15:47:02] D TCPManager : Registering handler for opcode : 0000000B
+[15:47:02] D TCPManager : Registering handler for opcode : 00000009
+[15:47:02] D TCPManager : Registering handler for opcode : 00000007
+[15:47:02] I TCPManager : Loading Crypt Handler
+[15:47:02] S TCPManager : Server listening to : 0.0.0.0:8048
+[15:47:02] I ConsoleMgr : Commands list : 
+[15:47:08] N ClientMgr : [-1727652252]	| WorldServer-1| 127.0.0.1:6003 | Connected
+[15:47:40] I TCPManager : New Connection : 127.0.0.1:64551
+[15:47:40] D Client : Connexion 127.0.0.1:64551
+[15:47:41] U packethandle : 
+ 08 05 10 02  1A 20 2F D9  5E 6E 1B BB  BF 3A 1B 6A  //..... /.^n...:.j
+ CA E6 47 38  61 66 6A 9F  4F 81 1B F8  71 11 37 55  //..G8afj.O...q.7U
+ E1 CF EF 90  5B 72                                //....[r                    
+[15:47:41] U Header : 
+ 26 02                                            //&.                            
+[15:47:41] U Packet : 
+ 08 00 12 10  01 53 21 4D  4A 04 27 B7  B4 59 0F 3E  //.....S!MJ.'..Y.>
+ A7 9D 29 E9  1A 10 49 18  A1 2A 64 E1  DA BD 84 D9  //..)...I..*d.....
+ F4 8A 8B 3C  27 20                                //...<'                     
+[15:47:42] U packethandle : 
+ 9D CD E6 8D  C1 DD 58 BC  D2 FB 51 92  B6 B7 D0 08  //......X...Q.....
+ 79 D5 8A E9  D7 87 2E FE  6C 66 72 14  26 F3 CA 7D  //y.......lfr.&..}
+ 31 DB 5D 48  19 E3 FC 16  C0 04 A1 EE  0F D8 6B 27  //1.]H..........k'
+[15:47:42] E TCPManager : Packet handler error :5 Google.ProtocolBuffers.InvalidProtocolBufferException: While parsing a protocol message, the input ended unexpectedly in the middle of a field.  This could mean either than the input has been truncated or that an embedded message misreported its own length.
+   at Google.ProtocolBuffers.CodedInputStream.ReadRawBytes(Int32 size) in e:\PrivateServer\protobuf\protobuf-csharp-port-2.4.1.521-source(r523)\protobuf-csharp-port-2.4.1.521-source(r523)\src\ProtocolBuffers\CodedInputStream.cs:line 1701
+   at Google.ProtocolBuffers.CodedInputStream.ReadBytes(ByteString& value) in e:\PrivateServer\protobuf\protobuf-csharp-port-2.4.1.521-source(r523)\protobuf-csharp-port-2.4.1.521-source(r523)\src\ProtocolBuffers\CodedInputStream.cs:line 440
+   at Google.ProtocolBuffers.UnknownFieldSet.Builder.MergeFieldFrom(UInt32 tag, ICodedInputStream input) in e:\PrivateServer\protobuf\protobuf-csharp-port-2.4.1.521-source(r523)\protobuf-csharp-port-2.4.1.521-source(r523)\src\ProtocolBuffers\UnknownFieldSet.cs:line 491
+   at Google.ProtocolBuffers.GeneratedBuilder`2.ParseUnknownField(ICodedInputStream input, Builder unknownFields, ExtensionRegistry extensionRegistry, UInt32 tag, String fieldName) in e:\PrivateServer\protobuf\protobuf-csharp-port-2.4.1.521-source(r523)\protobuf-csharp-port-2.4.1.521-source(r523)\src\ProtocolBuffers\GeneratedBuilder.cs:line 90
+   at FrameWork.AuthSessionTokenReq.Builder.MergeFrom(ICodedInputStream input, ExtensionRegistry extensionRegistry) in C:\Users\FN\Documents\GitHub\WarEmulator\Trunk\FrameWork\NetWork\ProtocolBuffers\AuthSessionTokenReqProto.cs:line 283
+   at FrameWork.AuthSessionTokenReq.Builder.MergeFrom(ICodedInputStream input) in C:\Users\FN\Documents\GitHub\WarEmulator\Trunk\FrameWork\NetWork\ProtocolBuffers\AuthSessionTokenReqProto.cs:line 248
+   at Google.ProtocolBuffers.AbstractBuilderLite`2.MergeFrom(Byte[] data) in e:\PrivateServer\protobuf\protobuf-csharp-port-2.4.1.521-source(r523)\protobuf-csharp-port-2.4.1.521-source(r523)\src\ProtocolBuffers\AbstractBuilderLite.cs:line 102
+   at LobbyServer.NetWork.Handler.AuthentificationHandlers.CMSG_AuthSessionTokenReq(BaseClient client, PacketIn packet) in C:\Users\FN\Documents\GitHub\WarEmulator\Trunk\LobbyServer\NetWork\Handler\AuthentificationHandlers.cs:line 70
+   at FrameWork.TCPManager.HandlePacket(BaseClient client, PacketIn Packet) in C:\Users\FN\Documents\GitHub\WarEmulator\Trunk\FrameWork\NetWork\TCPManager.cs:line 630
+[15:48:21] I BaseClient : disconnected  An existing connection was forcibly closed by the remote host
+[15:48:21] D Client : Deconnexion disconnected

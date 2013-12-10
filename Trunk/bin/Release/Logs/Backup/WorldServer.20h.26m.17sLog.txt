@@ -1,0 +1,552 @@
+[20:20:28] I DBManager : Registering table: Common.Character_social
+[20:20:28] I DBManager : Registering table: Common.Character_quest
+[20:20:28] I DBManager : Registering table: Common.Character_items
+[20:20:28] I DBManager : Registering table: Common.Character_ability
+[20:20:28] I DBManager : Registering table: Common.Character_tok
+[20:20:28] I DBManager : Registering table: Common.Character
+[20:20:28] I DBManager : Registering table: Common.Characters_influence
+[20:20:28] I DBManager : Registering table: Common.Character_value
+[20:20:28] I DBManager : Registering table: Common.Zone_Respawn
+[20:20:28] I DBManager : Registering table: Common.Quest_Objectives
+[20:20:28] I DBManager : Registering table: Common.Creature_vendor
+[20:20:28] I DBManager : Registering table: Common.Creature_item
+[20:20:28] I DBManager : Registering table: Common.Creature_text
+[20:20:28] I DBManager : Registering table: Common.GameObject_proto
+[20:20:28] I DBManager : Registering table: Common.Zone_Taxi
+[20:20:28] I DBManager : Registering table: Common.Item_Info
+[20:20:28] I DBManager : Registering table: Common.GameObject_spawn
+[20:20:28] I DBManager : Registering table: Common.CharacterInfo_stats
+[20:20:28] I DBManager : Registering table: Common.Ability_Info
+[20:20:28] I DBManager : Registering table: Common.Creature_proto
+[20:20:29] I DBManager : Registering table: Common.PQuest_Info
+[20:20:29] I DBManager : Registering table: Common.Random_name
+[20:20:29] I DBManager : Registering table: Common.Creature_spawn
+[20:20:29] I DBManager : Registering table: Common.Xp_Info
+[20:20:29] I DBManager : Registering table: Common.CharacterInfo
+[20:20:29] I DBManager : Registering table: Common.Renown_Info
+[20:20:29] I DBManager : Registering table: Common.Quest_Creature_Finisher
+[20:20:29] I DBManager : Registering table: Common.Tok_Info
+[20:20:29] I DBManager : Registering table: Common.Chapter_Reward
+[20:20:29] I DBManager : Registering table: Common.Zone_Info
+[20:20:29] I DBManager : Registering table: Common.Quest_Creature_Starter
+[20:20:29] I DBManager : Registering table: Common.Creature_loot
+[20:20:31] N DataConnection : SQL NonQuery took 2481ms!
+UPDATE `Creature_loots` SET Creature_loots_ID = uuid() WHERE Creature_loots_ID = ''
+[20:20:31] I DBManager : Registering table: Common.Chapter_Info
+[20:20:31] I DBManager : Registering table: Common.Quest
+[20:20:31] I DBManager : Registering table: Common.PQuest_Objective
+[20:20:31] I DBManager : Registering table: Common.CharacterInfo_item
+[20:20:31] I DBManager : Registering table: Common.Zone_Area
+[20:20:31] N ClientMgr : [173557790]	| LauncherServer| 127.0.0.1:6001 | Connected
+[20:20:31] N ClientMgr : [-375057258]	| LobbyServer| 127.0.0.1:6002 | Connected
+[20:20:31] S RpcClient : Connected to : 127.0.0.1:6800, Listen on : 127.0.0.1:6003
+[20:20:31] N ClientMgr : Server connected !
+[20:20:31] I AbilityMgr : Registering Ability Type : Deal Damage Handler(1)
+[20:20:31] S AbilityMgr : Loaded 41 Ability Info
+[20:20:31] S LoadZone_Info : Loaded 91 Zone_Info
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone205/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone005/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone003/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone205/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone100/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone107/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone100/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone101/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone200/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone008/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone209/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone003/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone108/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone005/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone100/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone205/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone209/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone001/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone109/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone105/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone101/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone108/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone005/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone102/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone105/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone103/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone201/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone103/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone009/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone202/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone107/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone009/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone209/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone002/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone102/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone008/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone101/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone106/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone105/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone011/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone007/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone108/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone102/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone205/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone201/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone207/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone006/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone102/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone009/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone205/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone009/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone100/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone001/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone009/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone200/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone105/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone202/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone200/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone005/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone011/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone109/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone202/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone203/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone206/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone109/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone007/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone101/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone106/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone201/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone202/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone103/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone208/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone103/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone009/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone202/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone007/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone207/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone008/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone011/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone100/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone206/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone003/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone206/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone102/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone011/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone200/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone003/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone201/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone106/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone106/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone103/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone011/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone202/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone209/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone200/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone005/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone011/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone002/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone006/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone002/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone203/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone005/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone203/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone007/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone202/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone201/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone009/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone208/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone200/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone009/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone109/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone002/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone001/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone108/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone200/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone007/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone006/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone208/mappieces.csv
+[20:20:32] S LoadZone_Info : Loaded 1 Zone_Respawn
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone003/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone008/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone007/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone201/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone202/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone006/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone103/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone107/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone100/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone105/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone008/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone107/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone200/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone102/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone011/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone201/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone208/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone207/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone105/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone205/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone203/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone106/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone108/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone102/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone109/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone007/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone207/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone205/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone203/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone106/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone101/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone209/mappieces.csv
+[20:20:32] E WorldMgr : Invalid Piece File Directory : zones/zone201/mappieces.csv
+[20:20:32] S LoadZone_Info : Loaded 326 Zone_Area && 0 Piece Informations
+[20:20:32] S LoadZone_Info : Loaded 0 Zone_Taxis
+[20:20:32] S LoadChapter_Infos : Loaded 0 Chapter_Infos
+[20:20:32] S LoadChapter_Infos : Loaded 11522 Chapter_Rewards
+[20:20:32] S WorldMgr : Loaded 293 Public Quests Info
+[20:20:32] S WorldMgr : Loaded 0 Public Quest Objectives
+[20:20:32] S LoadTok_Infos : Loaded 0 Tok_Infos
+[20:20:32] S LoadXp_Info : Loaded 0 Xp_Infos
+[20:20:32] S LoadRenown_Info : Loaded 80 Renown_Info
+[20:20:32] S LoadCreatureProto : Loaded 2162 Creature_Protos
+[20:20:32] S WorldMgr : Loaded 290 Creature Texts
+[20:20:32] S LoadCreatureItems : Loaded 9220 Creature_Items
+[20:20:32] S WorldMgr : Loaded 579 GameObject_Protos
+[20:20:32] S LoadCreatureSpawns : Loaded 15349 Creature_Spawns
+[20:20:32] S WorldMgr : Loaded 2178 GameObject_Spawns
+[20:20:32] S LoadQuestsObjectives : Loaded 0 Quests Objectives
+[20:20:32] S LoadQuests : Loaded 5128 Quests
+[20:20:33] S LoadCreatureQuests : Loaded 0 Quests Creature Starter
+[20:20:33] S LoadCreatureQuests : Loaded 1746 Quests Creature Finisher
+[20:20:33] S CharacterMgr : Loaded 24 CharacterInfo
+[20:20:33] S CharacterMgr : Loaded 24 CharacterInfo_Item
+[20:20:33] S LoadCharacters : 7  : Character(s) loaded
+[20:20:33] S CharacterMgr : Loaded 14400 CharacterInfo_Stats
+[20:20:33] S LoadItems : 33 : Characters items loaded
+[20:20:34] N DataConnecion : SQL Select (DEFAULT) took 2121ms!
+SELECT `Item_Infos_ID`, `Entry`, `Name`, `Description`, `Type`, `Race`, `ModelId`, `SlotId`, `Rarity`, `Career`, `Skills`, `Icon`, `Bind`, `Armor`, `SpellId`, `Dps`, `Speed`, `MinRank`, `MinRenown`, `StartQuest`, `Stats`, `SellPrice`, `TalismanSlots`, `MaxStack`, `ScriptName` FROM `Item_Infos`
+[20:20:34] S LoadItem_Info : Loaded 74801 Item_Info
+[20:20:34] S LoadRelation : Loading Relations
+[20:20:34] E LoadRegionSpawns : [2060] Invalid Spawns
+[20:20:34] S Region : [Nordland] : 4371
+[20:20:34] S Region : [Norsca] : 2257
+[20:20:34] S Region : [Altdorf] : 666
+[20:20:34] S Region : [Ostland] : 1452
+[20:20:34] S Region : [Troll Country] : 100
+[20:20:34] S Region : [Ekrund] : 942
+[20:20:34] S Region : [Kadrin Valley Pass] : 35
+[20:20:34] S Region : [Black Crag Keep] : 4
+[20:20:34] S Region : [Mount Bloodhorn] : 1709
+[20:20:34] S Region : [Death Peak] : 1
+[20:20:34] S Region : [Doomfist Crater] : 4
+[20:20:34] S Region : [Marshes of Madness] : 1
+[20:20:34] S Region : [The Inevitable City] : 795
+[20:20:34] S Region : [The Blighted Isle] : 3047
+[20:20:34] S Region : [Black Fire Basin] : 11
+[20:20:34] S Region : [Chrace] : 48
+[20:20:34] S Region : [Gates of Ekrund] : 2
+[20:20:34] S Region : [Thunder Valley] : 7
+[20:20:34] S Region : [Logrin's Forge] : 1
+[20:20:34] S Region : [Mourkain Temple] : 4
+[20:20:34] S Region : [Nordenwatch] : 10
+[20:20:34] S LoadChapters : Loading Zone from Chapters
+[20:20:34] S LoadCreatureQuests : Loaded 0 Quests Creature Starter
+[20:20:34] S LoadCreatureQuests : Loaded 1746 Quests Creature Finisher
+[20:20:34] S LoaderMgr : Loading complete in : 2827ms
+[20:20:34] I TCPManager : Starting...
+[20:20:34] I TCPManager : Loading the Packet Handler
+[20:20:35] I TCPManager : Loading Crypt Handler
+[20:20:35] S TCPManager : Server listening to : 0.0.0.0:10622
+[20:20:35] I ConsoleMgr : Commands list : 
+[20:20:53] I TCPManager : New Connection : 127.0.0.1:52981
+[20:20:54] S F_CONNECT : MeId=10
+[20:20:55] E TCPManager : Can not Handle opcode :4(00000004)
+[20:20:55] E TCPManager : Can not Handle opcode :4(00000004)
+[20:20:58] S Player : CreatePlayer
+[20:20:58] S Player : Construction de Bw
+[20:20:58] E TCPManager : Can not Handle opcode :4(00000004)
+[20:21:01] E TCPManager : Can not Handle opcode :200(000000C8)
+[20:21:01] E TCPManager : Can not Handle opcode :200(000000C8)
+[20:21:01] E TCPManager : Can not Handle opcode :200(000000C8)
+[20:21:01] E TCPManager : Can not Handle opcode :200(000000C8)
+[20:21:01] S F_INIT_PLAYER : Lancement !
+[20:21:01] S GetRegion : RegionId=8
+[20:21:01] S GetZoneRegion : RegionId=8
+[20:21:01] E RegionMgr : [8] La region lag, 1 objets! 155ms
+[20:21:01] I AddEventNotify : [Bw] Add de :Playing
+[20:21:01] S EquipItem : Itm=Ragged Peasant Boots
+[20:21:01] S EquipItem : Itm=Dull Charred Staff
+[20:21:01] S EquipItem : Itm=Torn Charred Shirt
+[20:21:01] S SocialInterface : Loaded 0 Socials of 2
+[20:21:01] S CellMgr[202,227] : Loading... 
+[20:21:01] S CellMgr[202,228] : Loading... 
+[20:21:01] S CellMgr[202,229] : Loading... 
+[20:21:01] S CellMgr[203,227] : Loading... 
+[20:21:01] S CellMgr[203,228] : Loading... 
+[20:21:01] S CellMgr[203,229] : Loading... 
+[20:21:01] S CellMgr[204,227] : Loading... 
+[20:21:01] S CellMgr[204,228] : Loading... 
+[20:21:01] S CellMgr[204,229] : Loading... 
+[20:21:01] I AbilityInterface : Sending 1 Abilities
+[20:21:01] I QuestInterface : Sended Quest : 0
+[20:21:01] E TCPManager : Can not Handle opcode :200(000000C8)
+[20:21:01] E TCPManager : Can not Handle opcode :159(0000009F)
+[20:21:01] I BaseClient : disconnected  An existing connection was forcibly closed by the remote host
+[20:21:01] S GameClient : Deconnexion disconnected,Id=10
+[20:21:01] S RemoveObject : Bw
+[20:21:04] S CombatStart : Griffon Striker Start combat with Raven Hellservant
+[20:21:04] S CombatStart : Raven Hellservant Start combat with Griffon Striker
+[20:21:04] S CombatStart : Griffon Striker Start combat with Raven Hellservant
+[20:21:04] S CombatStart : Raven Hellservant Start combat with Griffon Striker
+[20:21:04] S CombatStart : Griffon Striker Start combat with Raven Hellservant
+[20:21:04] S CombatStart : Raven Hellservant Start combat with Griffon Striker
+[20:21:04] S CombatStart : Griffon Striker Start combat with Raven Hellservant
+[20:21:04] S CombatStart : Raven Hellservant Start combat with Griffon Striker
+[20:21:04] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:21:04] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:21:04] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:21:04] S CombatStart : Griffon Striker Start combat with Marauder
+[20:21:04] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:21:04] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:21:04] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:21:04] S CombatStart : Griffon Striker Start combat with Marauder
+[20:21:04] S CombatStart : Marauder Start combat with Griffon Striker
+[20:21:04] S CombatStart : Grimmenhagen Villager Start combat with Marauder
+[20:21:04] S CombatStart : Griffon Striker Start combat with Marauder
+[20:21:04] S CombatStart : Marauder Start combat with Griffon Striker
+[20:21:04] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:21:04] S CombatStart : Griffon Striker Start combat with Marauder
+[20:21:04] S CombatStart : Marauder Start combat with Griffon Striker
+[20:21:04] S CombatStart : Griffon Striker Start combat with Marauder
+[20:21:04] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:21:04] S CombatStart : Marauder Start combat with Griffon Striker
+[20:21:04] S CombatStart : Marauder Start combat with Griffon Striker
+[20:21:04] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:21:04] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:21:04] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:21:04] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:21:04] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:21:04] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:21:05] S CombatStart : Marauder Start combat with Grimmenhagen Villager
+[20:21:07] S CombatStart : Griffon Striker Start combat with Raven Hellmagus
+[20:21:07] S CombatStart : Griffon Striker Start combat with Raven Hellmagus
+[20:21:07] S CombatStart : Griffon Striker Start combat with Marauder
+[20:21:08] S CombatStart : Raven Hellmagus Start combat with Griffon Striker
+[20:21:08] S CombatStart : Marauder Start combat with Griffon Striker
+[20:21:09] S CombatStart : Raven Hellmagus Start combat with Griffon Striker
+[20:21:10] S CombatStart : Griffon Striker Start combat with Raven Hellfang
+[20:21:10] S CombatStart : Griffon Striker Start combat with Marauder Torchbearer
+[20:21:11] S CombatStart : Raven Hellfang Start combat with Griffon Striker
+[20:21:13] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:21:13] S CombatStart : Griffon Striker Start combat with Marauder
+[20:21:14] S CombatStart : Marauder Start combat with Griffon Striker
+[20:21:16] S CombatStart : Grimmenhagen Villager Start combat with Marauder
+[20:21:16] S CombatStart : Grimmenhagen Villager Start combat with Marauder
+[20:21:17] S CombatStart : Marauder Start combat with Grimmenhagen Villager
+[20:22:01] S Player : Destruction de Bw
+[20:22:01] E RegionMgr : [8] La region lag, 109 objets! 128ms
+[20:22:07] S CombatStart : Griffon Striker Start combat with Raven Hellservant
+[20:22:07] S CombatStart : Raven Hellservant Start combat with Griffon Striker
+[20:22:07] S CombatStart : Griffon Striker Start combat with Raven Hellservant
+[20:22:07] S CombatStart : Raven Hellservant Start combat with Griffon Striker
+[20:22:07] S CombatStart : Griffon Striker Start combat with Marauder
+[20:22:07] S CombatStart : Griffon Striker Start combat with Marauder
+[20:22:07] S CombatStart : Marauder Start combat with Griffon Striker
+[20:22:07] S CombatStart : Grimmenhagen Villager Start combat with Marauder
+[20:22:07] S CombatStart : Griffon Striker Start combat with Marauder
+[20:22:07] S CombatStart : Marauder Start combat with Griffon Striker
+[20:22:07] S CombatStart : Marauder Start combat with Griffon Striker
+[20:22:10] S CombatStart : Griffon Striker Start combat with Raven Hellservant
+[20:22:10] S CombatStart : Raven Hellservant Start combat with Griffon Striker
+[20:22:10] S CombatStart : Griffon Striker Start combat with Marauder
+[20:22:11] S CombatStart : Marauder Start combat with Griffon Striker
+[20:22:13] S CombatStart : Griffon Striker Start combat with Raven Hellmagus
+[20:22:13] S CombatStart : Griffon Striker Start combat with Raven Hellmagus
+[20:22:13] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:22:13] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:22:13] S CombatStart : Griffon Striker Start combat with Marauder
+[20:22:13] S CombatStart : Griffon Striker Start combat with Marauder
+[20:22:13] S CombatStart : Marauder Start combat with Griffon Striker
+[20:22:13] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:22:14] S CombatStart : Raven Hellmagus Start combat with Griffon Striker
+[20:22:14] S CombatStart : Marauder Start combat with Griffon Striker
+[20:22:15] S CombatStart : Raven Hellmagus Start combat with Griffon Striker
+[20:22:16] S CombatStart : Griffon Striker Start combat with Raven Hellfang
+[20:22:16] S CombatStart : Griffon Striker Start combat with Raven Hellservant
+[20:22:16] S CombatStart : Raven Hellservant Start combat with Griffon Striker
+[20:22:16] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:22:16] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:22:16] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:22:16] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:22:16] S CombatStart : Grimmenhagen Villager Start combat with Marauder
+[20:22:16] S CombatStart : Griffon Striker Start combat with Marauder Torchbearer
+[20:22:16] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:22:16] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:22:16] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:22:16] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:22:17] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:22:17] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:22:17] S CombatStart : Raven Hellfang Start combat with Griffon Striker
+[20:22:17] S CombatStart : Marauder Start combat with Grimmenhagen Villager
+[20:22:19] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:22:19] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:22:20] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:22:22] S CombatStart : Griffon Striker Start combat with Marauder
+[20:22:23] S CombatStart : Marauder Start combat with Griffon Striker
+[20:22:28] S CombatStart : Grimmenhagen Villager Start combat with Marauder
+[20:22:28] S CombatStart : Grimmenhagen Villager Start combat with Marauder
+[20:22:29] S CombatStart : Marauder Start combat with Grimmenhagen Villager
+[20:23:01] E RegionMgr : [8] La region lag, 109 objets! 128ms
+[20:23:10] S CombatStart : Griffon Striker Start combat with Raven Hellservant
+[20:23:10] S CombatStart : Raven Hellservant Start combat with Griffon Striker
+[20:23:10] S CombatStart : Griffon Striker Start combat with Raven Hellservant
+[20:23:10] S CombatStart : Raven Hellservant Start combat with Griffon Striker
+[20:23:10] S CombatStart : Griffon Striker Start combat with Marauder
+[20:23:10] S CombatStart : Griffon Striker Start combat with Marauder
+[20:23:10] S CombatStart : Marauder Start combat with Griffon Striker
+[20:23:10] S CombatStart : Grimmenhagen Villager Start combat with Marauder
+[20:23:10] S CombatStart : Griffon Striker Start combat with Marauder
+[20:23:10] S CombatStart : Marauder Start combat with Griffon Striker
+[20:23:10] S CombatStart : Marauder Start combat with Griffon Striker
+[20:23:16] S CombatStart : Griffon Striker Start combat with Raven Hellmagus
+[20:23:16] S CombatStart : Griffon Striker Start combat with Raven Hellservant
+[20:23:16] S CombatStart : Raven Hellservant Start combat with Griffon Striker
+[20:23:16] S CombatStart : Griffon Striker Start combat with Marauder
+[20:23:17] S CombatStart : Marauder Start combat with Griffon Striker
+[20:23:17] S CombatStart : Raven Hellmagus Start combat with Griffon Striker
+[20:23:19] S CombatStart : Griffon Striker Start combat with Raven Hellmagus
+[20:23:19] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:23:19] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:23:19] S CombatStart : Griffon Striker Start combat with Marauder
+[20:23:19] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:23:21] S CombatStart : Marauder Start combat with Griffon Striker
+[20:23:21] S CombatStart : Raven Hellmagus Start combat with Griffon Striker
+[20:23:22] S CombatStart : Griffon Striker Start combat with Raven Hellfang
+[20:23:22] S CombatStart : Griffon Striker Start combat with Marauder
+[20:23:22] S CombatStart : Marauder Start combat with Griffon Striker
+[20:23:22] S CombatStart : Griffon Striker Start combat with Marauder Torchbearer
+[20:23:23] S CombatStart : Raven Hellfang Start combat with Griffon Striker
+[20:23:25] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:23:25] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:23:26] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:23:28] S CombatStart : Griffon Striker Start combat with Raven Hellservant
+[20:23:28] S CombatStart : Raven Hellservant Start combat with Griffon Striker
+[20:23:28] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:23:28] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:23:28] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:23:28] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:23:28] S CombatStart : Grimmenhagen Villager Start combat with Marauder
+[20:23:28] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:23:29] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:23:29] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:23:29] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:23:29] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:23:29] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:23:30] S CombatStart : Marauder Start combat with Grimmenhagen Villager
+[20:23:31] S CombatStart : Griffon Striker Start combat with Marauder
+[20:23:33] S CombatStart : Marauder Start combat with Griffon Striker
+[20:23:40] S CombatStart : Grimmenhagen Villager Start combat with Marauder
+[20:23:40] S CombatStart : Grimmenhagen Villager Start combat with Marauder
+[20:23:41] S CombatStart : Marauder Start combat with Grimmenhagen Villager
+[20:24:01] E RegionMgr : [8] La region lag, 109 objets! 130ms
+[20:24:13] S CombatStart : Griffon Striker Start combat with Raven Hellservant
+[20:24:13] S CombatStart : Raven Hellservant Start combat with Griffon Striker
+[20:24:13] S CombatStart : Griffon Striker Start combat with Raven Hellservant
+[20:24:13] S CombatStart : Raven Hellservant Start combat with Griffon Striker
+[20:24:13] S CombatStart : Griffon Striker Start combat with Marauder
+[20:24:14] S CombatStart : Griffon Striker Start combat with Marauder
+[20:24:14] S CombatStart : Marauder Start combat with Griffon Striker
+[20:24:14] S CombatStart : Grimmenhagen Villager Start combat with Marauder
+[20:24:14] S CombatStart : Griffon Striker Start combat with Marauder
+[20:24:14] S CombatStart : Marauder Start combat with Griffon Striker
+[20:24:14] S CombatStart : Marauder Start combat with Griffon Striker
+[20:24:19] S CombatStart : Griffon Striker Start combat with Raven Hellmagus
+[20:24:20] S CombatStart : Raven Hellmagus Start combat with Griffon Striker
+[20:24:22] S CombatStart : Griffon Striker Start combat with Raven Hellservant
+[20:24:22] S CombatStart : Raven Hellservant Start combat with Griffon Striker
+[20:24:23] S CombatStart : Griffon Striker Start combat with Marauder
+[20:24:23] S CombatStart : Marauder Start combat with Griffon Striker
+[20:24:25] S CombatStart : Griffon Striker Start combat with Raven Hellmagus
+[20:24:25] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:24:25] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:24:26] S CombatStart : Griffon Striker Start combat with Marauder
+[20:24:26] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:24:27] S CombatStart : Marauder Start combat with Griffon Striker
+[20:24:27] S CombatStart : Raven Hellmagus Start combat with Griffon Striker
+[20:24:28] S CombatStart : Griffon Striker Start combat with Raven Hellfang
+[20:24:29] S CombatStart : Griffon Striker Start combat with Marauder Torchbearer
+[20:24:29] S CombatStart : Raven Hellfang Start combat with Griffon Striker
+[20:24:31] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:24:32] S CombatStart : Griffon Striker Start combat with Marauder
+[20:24:32] S CombatStart : Marauder Start combat with Griffon Striker
+[20:24:32] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:24:32] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:24:40] S CombatStart : Griffon Striker Start combat with Raven Hellservant
+[20:24:40] S CombatStart : Raven Hellservant Start combat with Griffon Striker
+[20:24:40] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:24:40] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:24:41] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:24:41] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:24:41] S CombatStart : Grimmenhagen Villager Start combat with Marauder
+[20:24:41] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:24:41] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:24:41] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:24:41] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:24:41] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:24:41] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:24:42] S CombatStart : Marauder Start combat with Grimmenhagen Villager
+[20:24:44] S CombatStart : Griffon Striker Start combat with Marauder
+[20:24:45] S CombatStart : Marauder Start combat with Griffon Striker
+[20:24:52] S CombatStart : Grimmenhagen Villager Start combat with Marauder
+[20:24:53] S CombatStart : Grimmenhagen Villager Start combat with Marauder
+[20:24:53] S CombatStart : Marauder Start combat with Grimmenhagen Villager
+[20:25:01] E RegionMgr : [8] La region lag, 109 objets! 131ms
+[20:25:16] S CombatStart : Griffon Striker Start combat with Raven Hellservant
+[20:25:16] S CombatStart : Raven Hellservant Start combat with Griffon Striker
+[20:25:16] S CombatStart : Griffon Striker Start combat with Raven Hellservant
+[20:25:16] S CombatStart : Raven Hellservant Start combat with Griffon Striker
+[20:25:17] S CombatStart : Griffon Striker Start combat with Marauder
+[20:25:17] S CombatStart : Griffon Striker Start combat with Marauder
+[20:25:17] S CombatStart : Marauder Start combat with Griffon Striker
+[20:25:17] S CombatStart : Grimmenhagen Villager Start combat with Marauder
+[20:25:17] S CombatStart : Griffon Striker Start combat with Marauder
+[20:25:17] S CombatStart : Marauder Start combat with Griffon Striker
+[20:25:17] S CombatStart : Marauder Start combat with Griffon Striker
+[20:25:22] S CombatStart : Griffon Striker Start combat with Raven Hellmagus
+[20:25:23] S CombatStart : Raven Hellmagus Start combat with Griffon Striker
+[20:25:28] S CombatStart : Griffon Striker Start combat with Raven Hellservant
+[20:25:28] S CombatStart : Raven Hellservant Start combat with Griffon Striker
+[20:25:29] S CombatStart : Griffon Striker Start combat with Marauder
+[20:25:29] S CombatStart : Marauder Start combat with Griffon Striker
+[20:25:31] S CombatStart : Griffon Striker Start combat with Raven Hellmagus
+[20:25:31] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:25:31] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:25:32] S CombatStart : Griffon Striker Start combat with Marauder
+[20:25:32] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:25:33] S CombatStart : Marauder Start combat with Griffon Striker
+[20:25:33] S CombatStart : Raven Hellmagus Start combat with Griffon Striker
+[20:25:34] S CombatStart : Griffon Striker Start combat with Raven Hellfang
+[20:25:35] S CombatStart : Griffon Striker Start combat with Marauder Torchbearer
+[20:25:35] S CombatStart : Raven Hellfang Start combat with Griffon Striker
+[20:25:37] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:25:38] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:25:38] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:25:41] S CombatStart : Griffon Striker Start combat with Marauder
+[20:25:41] S CombatStart : Marauder Start combat with Griffon Striker
+[20:25:52] S CombatStart : Griffon Striker Start combat with Raven Hellservant
+[20:25:52] S CombatStart : Raven Hellservant Start combat with Griffon Striker
+[20:25:53] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:25:53] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:25:53] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:25:53] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:25:53] S CombatStart : Grimmenhagen Villager Start combat with Marauder
+[20:25:53] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:25:53] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:25:53] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:25:53] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:25:53] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:25:53] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:25:54] S CombatStart : Marauder Start combat with Grimmenhagen Villager
+[20:25:56] S CombatStart : Griffon Striker Start combat with Marauder
+[20:25:57] S CombatStart : Marauder Start combat with Griffon Striker
+[20:26:01] E RegionMgr : [8] La region lag, 109 objets! 127ms
+[20:26:05] S CombatStart : Grimmenhagen Villager Start combat with Marauder
+[20:26:05] S CombatStart : Grimmenhagen Villager Start combat with Marauder
+[20:26:05] S CombatStart : Marauder Start combat with Grimmenhagen Villager

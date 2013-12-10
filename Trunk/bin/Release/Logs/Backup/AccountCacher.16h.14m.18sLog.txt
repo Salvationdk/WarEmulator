@@ -1,0 +1,30 @@
+[16:11:09] I DBManager : Registering table: Common.Account
+[16:11:09] I DBManager : Registering table: Common.Realm
+[16:11:09] S RpcServer : Listening on : 127.0.0.1:6800
+[16:11:09] I AddRealm : New Realm : Aps
+[16:11:09] I ConsoleMgr : Commands list : 
+[16:11:09] I ConsoleMgr : .create : New Account <Username,Password>
+[16:11:09] S ServerMgr : [94342471]	| LauncherServer| 127.0.0.1:6001 | Connected
+[16:11:10] S ServerMgr : [1425712586]	| LobbyServer| 127.0.0.1:6002 | Connected
+[16:11:14] S ServerMgr : [411241594]	| WorldServer-1| 127.0.0.1:6003 | Connected
+[16:11:14] I GetRealm : RealmId = 1
+[16:11:17] I GetRealm : RealmId = 1
+[16:11:17] S Realm : Realm (Aps) online at 127.0.0.1:6003
+[16:11:19] I CheckAccount : z : System.Byte[]
+[16:11:19] I GetAccount : z
+[16:11:19] I LoadAccount : z
+[16:11:19] E Cp : .z:z.
+[16:11:19] I GenerateToken : z
+[16:11:19] I GetAccount : z
+[16:11:19] I LoadAccount : z
+[16:11:30] I BuildRealm : Sending 1 realm(s)
+[16:11:30] I GetAccount : z
+[16:11:30] I LoadAccount : z
+[16:11:30] I GetAccount : z
+[16:11:30] I LoadAccount : z
+[16:11:51] I CheckAccount : 1 : System.Byte[]
+[16:11:51] I GetAccount : 1
+[16:11:51] I LoadAccount : 1
+[16:11:51] E LoadAccount : Compte Introuvable : 1
+[16:11:51] E GetAccount : Compte Introuvable : 1
+[16:11:51] E CheckAccount : Compte introuvable : 1

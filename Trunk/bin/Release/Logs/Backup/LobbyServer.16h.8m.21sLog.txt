@@ -1,0 +1,51 @@
+[16:05:28] D RpcClient : Connect : 127.0.0.1:6800
+[16:05:28] D RpcClient : Connecting to : 127.0.0.1
+[16:05:28] D RpcClient : Listening on : 127.0.0.1:6002
+[16:05:28] D RpcClient : Registering handlers
+[16:05:28] D RpcClient : Registering : ClientMgr
+[16:05:28] N ClientMgr : [-1668988667]	| LauncherServer| 127.0.0.1:6001 | Connected
+[16:05:28] S RpcClient : Connected to : 127.0.0.1:6800, Listen on : 127.0.0.1:6002
+[16:05:28] N ClientMgr : Server connected !
+[16:05:28] I TCPManager : Starting...
+[16:05:28] D TCPManager : Allocation of the buffer pool : 300
+[16:05:28] I TCPManager : Loading the Packet Handler
+[16:05:28] D TCPManager : Registering handler for opcode : 00000001
+[16:05:28] D TCPManager : Registering handler for opcode : 00000005
+[16:05:28] D TCPManager : Registering handler for opcode : 0000000D
+[16:05:28] D TCPManager : Registering handler for opcode : 0000000B
+[16:05:28] D TCPManager : Registering handler for opcode : 00000009
+[16:05:28] D TCPManager : Registering handler for opcode : 00000007
+[16:05:28] I TCPManager : Loading Crypt Handler
+[16:05:28] S TCPManager : Server listening to : 0.0.0.0:8048
+[16:05:28] I ConsoleMgr : Commands list : 
+[16:05:32] N ClientMgr : [-1579089039]	| WorldServer-1| 127.0.0.1:6003 | Connected
+[16:05:52] I TCPManager : New Connection : 127.0.0.1:64972
+[16:05:52] D Client : Connexion 127.0.0.1:64972
+[16:05:52] U packethandle : 
+ 08 05 10 02  1A 20 AD 7D  D8 57 CE D3  EF 6C 3E 05  //..... .}.W...l>.
+ D6 B5 34 82  75 12 74 26  70 55 BD A8  D5 83 95 33  //..4.u.t&pU.....3
+ CF 2F 2C BD  8B 74                                //./,..t                    
+[16:05:52] U Header : 
+ 26 02                                            //&.                            
+[16:05:52] U Packet : 
+ 08 00 12 10  01 53 21 4D  4A 04 27 B7  B4 59 0F 3E  //.....S!MJ.'..Y.>
+ A7 9D 29 E9  1A 10 49 18  A1 2A 64 E1  DA BD 84 D9  //..)...I..*d.....
+ F4 8A 8B 3C  27 20                                //...<'                     
+[16:05:53] U packethandle : 
+ 43 E6 3F 57  C2 17 2A 3F  8D 4D DC C5  DD D4 DF B2  //C.?W..*?.M......
+ 93 A6 31 EC  24 05 77 59  14 8A 6D 05  77 A8 7A 3B  //..1.$.wY..m.w.z;
+ 1F D4 59 B2  72 33 D4 B9  3E 40 60 3D  9B 2D D4 A9  //..Y.r3..>@`=.-..
+[16:05:53] E TCPManager : Packet handler error :5 Google.ProtocolBuffers.InvalidProtocolBufferException: Protocol message tag had invalid wire type.
+   at Google.ProtocolBuffers.UnknownFieldSet.Builder.MergeFieldFrom(UInt32 tag, ICodedInputStream input) in e:\PrivateServer\protobuf\protobuf-csharp-port-2.4.1.521-source(r523)\protobuf-csharp-port-2.4.1.521-source(r523)\src\ProtocolBuffers\UnknownFieldSet.cs:line 509
+   at Google.ProtocolBuffers.UnknownFieldSet.Builder.MergeFrom(ICodedInputStream input) in e:\PrivateServer\protobuf\protobuf-csharp-port-2.4.1.521-source(r523)\protobuf-csharp-port-2.4.1.521-source(r523)\src\ProtocolBuffers\UnknownFieldSet.cs:line 434
+   at Google.ProtocolBuffers.UnknownFieldSet.Builder.Google.ProtocolBuffers.IBuilderLite.WeakMergeFrom(ICodedInputStream input) in e:\PrivateServer\protobuf\protobuf-csharp-port-2.4.1.521-source(r523)\protobuf-csharp-port-2.4.1.521-source(r523)\src\ProtocolBuffers\UnknownFieldSet.cs:line 1012
+   at Google.ProtocolBuffers.CodedInputStream.ReadUnknownGroup(Int32 fieldNumber, IBuilderLite builder) in e:\PrivateServer\protobuf\protobuf-csharp-port-2.4.1.521-source(r523)\protobuf-csharp-port-2.4.1.521-source(r523)\src\ProtocolBuffers\CodedInputStream.cs:line 399
+   at Google.ProtocolBuffers.UnknownFieldSet.Builder.MergeFieldFrom(UInt32 tag, ICodedInputStream input) in e:\PrivateServer\protobuf\protobuf-csharp-port-2.4.1.521-source(r523)\protobuf-csharp-port-2.4.1.521-source(r523)\src\ProtocolBuffers\UnknownFieldSet.cs:line 501
+   at Google.ProtocolBuffers.GeneratedBuilder`2.ParseUnknownField(ICodedInputStream input, Builder unknownFields, ExtensionRegistry extensionRegistry, UInt32 tag, String fieldName) in e:\PrivateServer\protobuf\protobuf-csharp-port-2.4.1.521-source(r523)\protobuf-csharp-port-2.4.1.521-source(r523)\src\ProtocolBuffers\GeneratedBuilder.cs:line 90
+   at FrameWork.AuthSessionTokenReq.Builder.MergeFrom(ICodedInputStream input, ExtensionRegistry extensionRegistry) in C:\Users\FN\Documents\GitHub\WarEmulator\Trunk\FrameWork\NetWork\ProtocolBuffers\AuthSessionTokenReqProto.cs:line 283
+   at FrameWork.AuthSessionTokenReq.Builder.MergeFrom(ICodedInputStream input) in C:\Users\FN\Documents\GitHub\WarEmulator\Trunk\FrameWork\NetWork\ProtocolBuffers\AuthSessionTokenReqProto.cs:line 248
+   at Google.ProtocolBuffers.AbstractBuilderLite`2.MergeFrom(Byte[] data) in e:\PrivateServer\protobuf\protobuf-csharp-port-2.4.1.521-source(r523)\protobuf-csharp-port-2.4.1.521-source(r523)\src\ProtocolBuffers\AbstractBuilderLite.cs:line 102
+   at LobbyServer.NetWork.Handler.AuthentificationHandlers.CMSG_AuthSessionTokenReq(BaseClient client, PacketIn packet) in C:\Users\FN\Documents\GitHub\WarEmulator\Trunk\LobbyServer\NetWork\Handler\AuthentificationHandlers.cs:line 70
+   at FrameWork.TCPManager.HandlePacket(BaseClient client, PacketIn Packet) in C:\Users\FN\Documents\GitHub\WarEmulator\Trunk\FrameWork\NetWork\TCPManager.cs:line 630
+[16:05:54] I BaseClient : disconnected  An existing connection was forcibly closed by the remote host
+[16:05:54] D Client : Deconnexion disconnected

@@ -1,0 +1,85 @@
+[16:20:14] D RpcClient : Connect : 127.0.0.1:6800
+[16:20:14] D RpcClient : Connecting to : 127.0.0.1
+[16:20:14] D RpcClient : Listening on : 127.0.0.1:6002
+[16:20:14] D RpcClient : Registering handlers
+[16:20:14] D RpcClient : Registering : ClientMgr
+[16:20:14] N ClientMgr : [718874088]	| LauncherServer| 127.0.0.1:6001 | Connected
+[16:20:14] S RpcClient : Connected to : 127.0.0.1:6800, Listen on : 127.0.0.1:6002
+[16:20:14] N ClientMgr : Server connected !
+[16:20:14] I TCPManager : Starting...
+[16:20:14] D TCPManager : Allocation of the buffer pool : 300
+[16:20:14] I TCPManager : Loading the Packet Handler
+[16:20:14] D TCPManager : Registering handler for opcode : 00000001
+[16:20:14] D TCPManager : Registering handler for opcode : 00000005
+[16:20:14] D TCPManager : Registering handler for opcode : 0000000D
+[16:20:14] D TCPManager : Registering handler for opcode : 0000000B
+[16:20:14] D TCPManager : Registering handler for opcode : 00000009
+[16:20:14] D TCPManager : Registering handler for opcode : 00000007
+[16:20:14] I TCPManager : Loading Crypt Handler
+[16:20:14] S TCPManager : Server listening to : 0.0.0.0:8048
+[16:20:14] I ConsoleMgr : Commands list : 
+[16:20:18] N ClientMgr : [1741430662]	| WorldServer-1| 127.0.0.1:6003 | Connected
+[16:20:31] I TCPManager : New Connection : 127.0.0.1:65460
+[16:20:31] D Client : Connexion 127.0.0.1:65460
+[16:20:31] U packethandle : 
+ B8 21 9C 43  84 D4 83 B6  78 46 10 15  80 35 E9 DD  //.!.C....xF...5..
+ 94 1B 4B E3  E8 2A D2 3C  17 27 E9 D1  76 91 E9 82  //..K..*.<.'..v...
+ DC A9 6F 00  50 A5 C5 66  A9 47 F4 16  8B FC C6 8D  //..o.P..f.G......
+[16:20:31] U Header : 
+ 26 02                                            //&.                            
+[16:20:31] U Packet : 
+ 08 00 12 10  01 53 21 4D  4A 04 27 B7  B4 59 0F 3E  //.....S!MJ.'..Y.>
+ A7 9D 29 E9  1A 10 49 18  A1 2A 64 E1  DA BD 84 D9  //..)...I..*d.....
+ F4 8A 8B 3C  27 20                                //...<'                     
+[16:20:31] U packethandle : 
+ 0A 20 36 36  33 41 46 43  34 46 39 33  43 43 32 45  //. 663AFC4F93CC2E
+ 43 35 42 43  30 36 41 44  36 33 46 30  31 41 37 30  //C5BC06AD63F01A70
+ 43 30                                            //C0                            
+[16:20:31] U Header : 
+ 02 06                                            //..                            
+[16:20:31] U Packet : 
+ 08 00                                            //..                            
+[16:20:31] U packethandle : 
+ 08 09                                            //..                            
+[16:20:31] D GetAcctProp : recv
+[16:20:31] U Header : 
+ 02 0C                                            //..                            
+[16:20:31] U Packet : 
+ 08 00                                            //..                            
+[16:20:31] D GetAcctProp : sent
+[16:20:31] U packethandle : 
+ 00 0B 00 09                                       //....                        
+[16:20:55] I BaseClient : disconnected  An existing connection was forcibly closed by the remote host
+[16:20:55] D Client : Deconnexion disconnected
+[16:21:07] I TCPManager : New Connection : 127.0.0.1:65474
+[16:21:07] D Client : Connexion 127.0.0.1:65474
+[16:21:07] U packethandle : 
+ A0 EB 10 B2  65 ED 8C 11  C6 D0 07 7C  D0 14 79 13  //....e......|..y.
+ B5 D7 40 4B  7F 91 23 C8  66 BE CE 7C  71 41 C8 41  //..@K.#.f..|qA.A
+ 13 66 18 0B  27 F8 47 1A  E5 3A D9 C6  C4 8B 33 01  //.f..'.G..:....3.
+[16:21:07] U Header : 
+ 26 02                                            //&.                            
+[16:21:07] U Packet : 
+ 08 00 12 10  01 53 21 4D  4A 04 27 B7  B4 59 0F 3E  //.....S!MJ.'..Y.>
+ A7 9D 29 E9  1A 10 49 18  A1 2A 64 E1  DA BD 84 D9  //..)...I..*d.....
+ F4 8A 8B 3C  27 20                                //...<'                     
+[16:21:07] U packethandle : 
+ 0A 20 38 31  36 43 33 36  32 32 43 38  45 34 35 37  //. 816C3622C8E457
+ 38 43 32 36  39 43 44 41  31 38 38 31  36 36 38 34  //8C269CDA18816684
+ 43 46                                            //CF                            
+[16:21:07] U Header : 
+ 02 06                                            //..                            
+[16:21:07] U Packet : 
+ 08 00                                            //..                            
+[16:21:07] U packethandle : 
+ 08 09                                            //..                            
+[16:21:07] D GetAcctProp : recv
+[16:21:07] U Header : 
+ 02 0C                                            //..                            
+[16:21:07] U Packet : 
+ 08 00                                            //..                            
+[16:21:07] D GetAcctProp : sent
+[16:21:07] U packethandle : 
+ 00 0B 00 09                                       //....                        
+[16:21:10] I BaseClient : disconnected  An existing connection was forcibly closed by the remote host
+[16:21:10] D Client : Deconnexion disconnected

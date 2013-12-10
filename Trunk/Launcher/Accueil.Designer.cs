@@ -37,13 +37,13 @@
             this.L_selection = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.Realms = new System.Windows.Forms.DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
-            this.b_realms = new System.Windows.Forms.Button();
             this.RealmName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Online = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Players = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Destruction = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Order = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label4 = new System.Windows.Forms.Label();
+            this.b_realms = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Realms)).BeginInit();
             this.SuspendLayout();
             // 
@@ -142,25 +142,6 @@
             this.Realms.Size = new System.Drawing.Size(429, 91);
             this.Realms.TabIndex = 8;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 138);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Realms :";
-            // 
-            // b_realms
-            // 
-            this.b_realms.Location = new System.Drawing.Point(150, 128);
-            this.b_realms.Name = "b_realms";
-            this.b_realms.Size = new System.Drawing.Size(128, 23);
-            this.b_realms.TabIndex = 10;
-            this.b_realms.Text = "Update Realms";
-            this.b_realms.UseVisualStyleBackColor = true;
-            this.b_realms.Click += new System.EventHandler(this.b_realms_Click);
-            // 
             // RealmName
             // 
             this.RealmName.HeaderText = "Realm Name";
@@ -193,6 +174,25 @@
             this.Order.Name = "Order";
             this.Order.ReadOnly = true;
             this.Order.Width = 50;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(13, 138);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(48, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Realms :";
+            // 
+            // b_realms
+            // 
+            this.b_realms.Location = new System.Drawing.Point(150, 128);
+            this.b_realms.Name = "b_realms";
+            this.b_realms.Size = new System.Drawing.Size(128, 23);
+            this.b_realms.TabIndex = 10;
+            this.b_realms.Text = "Update Realms";
+            this.b_realms.UseVisualStyleBackColor = true;
+            this.b_realms.Click += new System.EventHandler(this.b_realms_Click);
             // 
             // Accueil
             // 

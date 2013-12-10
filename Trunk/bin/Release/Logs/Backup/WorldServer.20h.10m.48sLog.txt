@@ -1,0 +1,377 @@
+[20:10:21] D IObjectDatabase : Characters->Start Server=127.0.0.1;Port=3306;Database=war_characters;User Id=root;Password=123;Treat Tiny As Boolean=False...
+[20:10:21] I DBManager : Registering table: Common.Character_social
+[20:10:21] D DataConnecion : SQL: DESCRIBE `Characters_socials`
+[20:10:21] D DataConnection : New DB Connection
+[20:10:21] D DataConnecion : characterid
+[20:10:21] D DataConnecion : distcharacterid
+[20:10:21] D DataConnecion : distname
+[20:10:21] D DataConnecion : friend
+[20:10:21] D DataConnecion : ignore
+[20:10:21] D DataConnecion : characters_socials_id
+[20:10:21] D DataConnecion : 6 in table
+[20:10:21] D DataConnecion : SQL Select (DEFAULT) exec time 0ms
+[20:10:21] D DataConnecion : CREATE TABLE IF NOT EXISTS `Characters_socials` (`Characters_socials_ID` VARCHAR(255) NOT NULL, `CharacterId` INT NOT NULL, `DistCharacterId` INT NOT NULL, `DistName` VARCHAR(255) NOT NULL, `Friend` TINYINT UNSIGNED NOT NULL, `Ignore` TINYINT UNSIGNED NOT NULL, PRIMARY KEY (`Characters_socials_ID`)) AUTO_INCREMENT=0
+[20:10:21] D DataConnection : SQL: CREATE TABLE IF NOT EXISTS `Characters_socials` (`Characters_socials_ID` VARCHAR(255) NOT NULL, `CharacterId` INT NOT NULL, `DistCharacterId` INT NOT NULL, `DistName` VARCHAR(255) NOT NULL, `Friend` TINYINT UNSIGNED NOT NULL, `Ignore` TINYINT UNSIGNED NOT NULL, PRIMARY KEY (`Characters_socials_ID`)) AUTO_INCREMENT=0
+[20:10:21] D DataConnection : SQL NonQuery exec time 0ms
+[20:10:21] D DataConnection : SQL: UPDATE `Characters_socials` SET Characters_socials_ID = uuid() WHERE Characters_socials_ID = ''
+[20:10:21] D DataConnection : SQL NonQuery exec time 0ms
+[20:10:21] I DBManager : Registering table: Common.Character_quest
+[20:10:21] D DataConnecion : SQL: DESCRIBE `Characters_quests`
+[20:10:21] D DataConnecion : objectives
+[20:10:21] D DataConnecion : characterid
+[20:10:21] D DataConnecion : questid
+[20:10:21] D DataConnecion : done
+[20:10:21] D DataConnecion : characters_quests_id
+[20:10:21] D DataConnecion : 5 in table
+[20:10:21] D DataConnecion : SQL Select (DEFAULT) exec time 16ms
+[20:10:21] D DataConnecion : CREATE TABLE IF NOT EXISTS `Characters_quests` (`Characters_quests_ID` VARCHAR(255) NOT NULL, `Objectives` TEXT NOT NULL, `CharacterID` INT NOT NULL, `QuestID` SMALLINT UNSIGNED NOT NULL, `Done` TINYINT UNSIGNED NOT NULL, PRIMARY KEY (`Characters_quests_ID`)) AUTO_INCREMENT=0
+[20:10:21] D DataConnection : SQL: CREATE TABLE IF NOT EXISTS `Characters_quests` (`Characters_quests_ID` VARCHAR(255) NOT NULL, `Objectives` TEXT NOT NULL, `CharacterID` INT NOT NULL, `QuestID` SMALLINT UNSIGNED NOT NULL, `Done` TINYINT UNSIGNED NOT NULL, PRIMARY KEY (`Characters_quests_ID`)) AUTO_INCREMENT=0
+[20:10:21] D DataConnection : SQL NonQuery exec time 0ms
+[20:10:21] D DataConnection : SQL: UPDATE `Characters_quests` SET Characters_quests_ID = uuid() WHERE Characters_quests_ID = ''
+[20:10:21] D DataConnection : SQL NonQuery exec time 0ms
+[20:10:21] I DBManager : Registering table: Common.Character_items
+[20:10:21] D DataConnecion : SQL: DESCRIBE `Characters_items`
+[20:10:21] D DataConnecion : characters_items_id
+[20:10:21] D DataConnecion : guid
+[20:10:21] D DataConnecion : characterid
+[20:10:21] D DataConnecion : entry
+[20:10:21] D DataConnecion : slotid
+[20:10:21] D DataConnecion : modelid
+[20:10:21] D DataConnecion : counts
+[20:10:21] D DataConnecion : 7 in table
+[20:10:21] D DataConnecion : SQL Select (DEFAULT) exec time 0ms
+[20:10:21] D DataConnecion : CREATE TABLE IF NOT EXISTS `Characters_items` (`Characters_items_ID` VARCHAR(255) NOT NULL, `Guid` BIGINT NOT NULL, `CharacterId` INT NOT NULL, `Entry` INT UNSIGNED NOT NULL, `SlotId` SMALLINT UNSIGNED NOT NULL, `ModelId` INT UNSIGNED NOT NULL, `Counts` SMALLINT UNSIGNED NOT NULL, PRIMARY KEY (`Characters_items_ID`)) AUTO_INCREMENT=0
+[20:10:21] D DataConnection : SQL: CREATE TABLE IF NOT EXISTS `Characters_items` (`Characters_items_ID` VARCHAR(255) NOT NULL, `Guid` BIGINT NOT NULL, `CharacterId` INT NOT NULL, `Entry` INT UNSIGNED NOT NULL, `SlotId` SMALLINT UNSIGNED NOT NULL, `ModelId` INT UNSIGNED NOT NULL, `Counts` SMALLINT UNSIGNED NOT NULL, PRIMARY KEY (`Characters_items_ID`)) AUTO_INCREMENT=0
+[20:10:22] D DataConnection : SQL NonQuery exec time 639ms
+[20:10:22] N DataConnection : SQL NonQuery took 639ms!
+CREATE TABLE IF NOT EXISTS `Characters_items` (`Characters_items_ID` VARCHAR(255) NOT NULL, `Guid` BIGINT NOT NULL, `CharacterId` INT NOT NULL, `Entry` INT UNSIGNED NOT NULL, `SlotId` SMALLINT UNSIGNED NOT NULL, `ModelId` INT UNSIGNED NOT NULL, `Counts` SMALLINT UNSIGNED NOT NULL, PRIMARY KEY (`Characters_items_ID`)) AUTO_INCREMENT=0
+[20:10:22] D DataConnection : SQL: UPDATE `Characters_items` SET Characters_items_ID = uuid() WHERE Characters_items_ID = ''
+[20:10:22] D DataConnection : SQL NonQuery exec time 0ms
+[20:10:22] I DBManager : Registering table: Common.Character_ability
+[20:10:22] D DataConnecion : SQL: DESCRIBE `Character_abilities`
+[20:10:22] D DataConnecion : characterid
+[20:10:22] D DataConnecion : abilityid
+[20:10:22] D DataConnecion : lastcast
+[20:10:22] D DataConnecion : character_abilities_id
+[20:10:22] D DataConnecion : 4 in table
+[20:10:22] D DataConnecion : SQL Select (DEFAULT) exec time 0ms
+[20:10:22] D DataConnecion : CREATE TABLE IF NOT EXISTS `Character_abilities` (`Character_abilities_ID` VARCHAR(255) NOT NULL, `CharacterID` INT, `AbilityID` SMALLINT UNSIGNED, `LastCast` INT, PRIMARY KEY (`Character_abilities_ID`)) AUTO_INCREMENT=0
+[20:10:22] D DataConnection : SQL: CREATE TABLE IF NOT EXISTS `Character_abilities` (`Character_abilities_ID` VARCHAR(255) NOT NULL, `CharacterID` INT, `AbilityID` SMALLINT UNSIGNED, `LastCast` INT, PRIMARY KEY (`Character_abilities_ID`)) AUTO_INCREMENT=0
+[20:10:22] D DataConnection : SQL NonQuery exec time 0ms
+[20:10:22] D DataConnection : SQL: UPDATE `Character_abilities` SET Character_abilities_ID = uuid() WHERE Character_abilities_ID = ''
+[20:10:22] D DataConnection : SQL NonQuery exec time 0ms
+[20:10:22] I DBManager : Registering table: Common.Character_tok
+[20:10:22] D DataConnecion : SQL: DESCRIBE `Characters_Toks`
+[20:10:22] D DataConnecion : characterid
+[20:10:22] D DataConnecion : tokentry
+[20:10:22] D DataConnecion : count
+[20:10:22] D DataConnecion : characters_toks_id
+[20:10:22] D DataConnecion : 4 in table
+[20:10:22] D DataConnecion : SQL Select (DEFAULT) exec time 0ms
+[20:10:22] D DataConnecion : CREATE TABLE IF NOT EXISTS `Characters_Toks` (`Characters_Toks_ID` VARCHAR(255) NOT NULL, `CharacterId` INT, `TokEntry` INT UNSIGNED, `Count` INT UNSIGNED, PRIMARY KEY (`Characters_Toks_ID`)) AUTO_INCREMENT=0
+[20:10:22] D DataConnection : SQL: CREATE TABLE IF NOT EXISTS `Characters_Toks` (`Characters_Toks_ID` VARCHAR(255) NOT NULL, `CharacterId` INT, `TokEntry` INT UNSIGNED, `Count` INT UNSIGNED, PRIMARY KEY (`Characters_Toks_ID`)) AUTO_INCREMENT=0
+[20:10:22] D DataConnection : SQL NonQuery exec time 0ms
+[20:10:22] D DataConnection : SQL: UPDATE `Characters_Toks` SET Characters_Toks_ID = uuid() WHERE Characters_Toks_ID = ''
+[20:10:22] D DataConnection : SQL NonQuery exec time 0ms
+[20:10:22] I DBManager : Registering table: Common.Character
+[20:10:22] D DataConnecion : SQL: DESCRIBE `Characters`
+[20:10:22] D DataConnecion : characters_id
+[20:10:22] D DataConnecion : characterid
+[20:10:22] D DataConnecion : name
+[20:10:22] D DataConnecion : realmid
+[20:10:22] D DataConnecion : accountid
+[20:10:22] D DataConnecion : slotid
+[20:10:22] D DataConnecion : modelid
+[20:10:22] D DataConnecion : career
+[20:10:22] D DataConnecion : careerline
+[20:10:22] D DataConnecion : realm
+[20:10:22] D DataConnecion : heldleft
+[20:10:22] D DataConnecion : race
+[20:10:22] D DataConnecion : traits
+[20:10:22] D DataConnecion : sex
+[20:10:22] D DataConnecion : 14 in table
+[20:10:22] D DataConnecion : SQL Select (DEFAULT) exec time 0ms
+[20:10:22] D DataConnecion : CREATE TABLE IF NOT EXISTS `Characters` (`Characters_ID` VARCHAR(255) NOT NULL, `CharacterId` INT NOT NULL, `Name` VARCHAR(255) NOT NULL, `RealmId` INT NOT NULL, `AccountId` INT NOT NULL, `SlotId` TINYINT UNSIGNED NOT NULL, `ModelId` TINYINT UNSIGNED NOT NULL, `Career` TINYINT UNSIGNED NOT NULL, `CareerLine` TINYINT UNSIGNED NOT NULL, `Realm` TINYINT UNSIGNED NOT NULL, `HeldLeft` INT NOT NULL, `Race` TINYINT UNSIGNED NOT NULL, `Traits` TEXT NOT NULL, `Sex` TINYINT UNSIGNED NOT NULL, PRIMARY KEY (`Characters_ID`), UNIQUE INDEX (`Name`)) AUTO_INCREMENT=0
+[20:10:22] D DataConnection : SQL: CREATE TABLE IF NOT EXISTS `Characters` (`Characters_ID` VARCHAR(255) NOT NULL, `CharacterId` INT NOT NULL, `Name` VARCHAR(255) NOT NULL, `RealmId` INT NOT NULL, `AccountId` INT NOT NULL, `SlotId` TINYINT UNSIGNED NOT NULL, `ModelId` TINYINT UNSIGNED NOT NULL, `Career` TINYINT UNSIGNED NOT NULL, `CareerLine` TINYINT UNSIGNED NOT NULL, `Realm` TINYINT UNSIGNED NOT NULL, `HeldLeft` INT NOT NULL, `Race` TINYINT UNSIGNED NOT NULL, `Traits` TEXT NOT NULL, `Sex` TINYINT UNSIGNED NOT NULL, PRIMARY KEY (`Characters_ID`), UNIQUE INDEX (`Name`)) AUTO_INCREMENT=0
+[20:10:22] D DataConnection : SQL NonQuery exec time 0ms
+[20:10:22] D DataConnection : SQL: UPDATE `Characters` SET Characters_ID = uuid() WHERE Characters_ID = ''
+[20:10:22] D DataConnection : SQL NonQuery exec time 0ms
+[20:10:22] I DBManager : Registering table: Common.Characters_influence
+[20:10:22] D DataConnecion : SQL: DESCRIBE `Character_influences`
+[20:10:22] D DataConnecion : characterid
+[20:10:22] D DataConnecion : influenceid
+[20:10:22] D DataConnecion : influencecount
+[20:10:22] D DataConnecion : character_influences_id
+[20:10:22] D DataConnecion : 4 in table
+[20:10:22] D DataConnecion : SQL Select (DEFAULT) exec time 16ms
+[20:10:22] D DataConnecion : CREATE TABLE IF NOT EXISTS `Character_influences` (`Character_influences_ID` VARCHAR(255) NOT NULL, `CharacterId` INT NOT NULL, `InfluenceId` SMALLINT UNSIGNED NOT NULL, `InfluenceCount` INT UNSIGNED NOT NULL, PRIMARY KEY (`Character_influences_ID`)) AUTO_INCREMENT=0
+[20:10:22] D DataConnection : SQL: CREATE TABLE IF NOT EXISTS `Character_influences` (`Character_influences_ID` VARCHAR(255) NOT NULL, `CharacterId` INT NOT NULL, `InfluenceId` SMALLINT UNSIGNED NOT NULL, `InfluenceCount` INT UNSIGNED NOT NULL, PRIMARY KEY (`Character_influences_ID`)) AUTO_INCREMENT=0
+[20:10:22] D DataConnection : SQL NonQuery exec time 0ms
+[20:10:22] D DataConnection : SQL: UPDATE `Character_influences` SET Character_influences_ID = uuid() WHERE Character_influences_ID = ''
+[20:10:22] D DataConnection : SQL NonQuery exec time 0ms
+[20:10:22] I DBManager : Registering table: Common.Character_value
+[20:10:22] D DataConnecion : SQL: DESCRIBE `Characters_value`
+[20:10:22] D DataConnecion : characterid
+[20:10:22] D DataConnecion : level
+[20:10:22] D DataConnecion : xp
+[20:10:22] D DataConnecion : xpmode
+[20:10:22] D DataConnecion : restxp
+[20:10:22] D DataConnecion : renown
+[20:10:22] D DataConnecion : renownrank
+[20:10:22] D DataConnecion : money
+[20:10:22] D DataConnecion : speed
+[20:10:22] D DataConnecion : regionid
+[20:10:22] D DataConnecion : zoneid
+[20:10:22] D DataConnecion : worldx
+[20:10:22] D DataConnecion : worldy
+[20:10:22] D DataConnecion : worldz
+[20:10:22] D DataConnecion : worldo
+[20:10:22] D DataConnecion : rallypoint
+[20:10:22] D DataConnecion : bagbuy
+[20:10:22] D DataConnecion : skills
+[20:10:22] D DataConnecion : online
+[20:10:22] D DataConnecion : characters_value_id
+[20:10:22] D DataConnecion : 20 in table
+[20:10:22] D DataConnecion : SQL Select (DEFAULT) exec time 0ms
+[20:10:22] D DataConnecion : CREATE TABLE IF NOT EXISTS `Characters_value` (`Characters_value_ID` VARCHAR(255) NOT NULL, `CharacterId` INT, `Level` TINYINT UNSIGNED NOT NULL, `Xp` INT UNSIGNED NOT NULL, `XpMode` INT NOT NULL, `RestXp` INT NOT NULL, `Renown` INT UNSIGNED NOT NULL, `RenownRank` TINYINT UNSIGNED NOT NULL, `Money` INT UNSIGNED NOT NULL, `Speed` INT NOT NULL, `RegionId` INT NOT NULL, `ZoneId` SMALLINT UNSIGNED NOT NULL, `WorldX` INT NOT NULL, `WorldY` INT NOT NULL, `WorldZ` INT NOT NULL, `WorldO` INT NOT NULL, `RallyPoint` SMALLINT UNSIGNED NOT NULL, `BagBuy` TINYINT UNSIGNED NOT NULL, `Skills` INT UNSIGNED NOT NULL, `Online` TINYINT UNSIGNED NOT NULL, PRIMARY KEY (`Characters_value_ID`), UNIQUE INDEX (`CharacterId`)) AUTO_INCREMENT=0
+[20:10:22] D DataConnection : SQL: CREATE TABLE IF NOT EXISTS `Characters_value` (`Characters_value_ID` VARCHAR(255) NOT NULL, `CharacterId` INT, `Level` TINYINT UNSIGNED NOT NULL, `Xp` INT UNSIGNED NOT NULL, `XpMode` INT NOT NULL, `RestXp` INT NOT NULL, `Renown` INT UNSIGNED NOT NULL, `RenownRank` TINYINT UNSIGNED NOT NULL, `Money` INT UNSIGNED NOT NULL, `Speed` INT NOT NULL, `RegionId` INT NOT NULL, `ZoneId` SMALLINT UNSIGNED NOT NULL, `WorldX` INT NOT NULL, `WorldY` INT NOT NULL, `WorldZ` INT NOT NULL, `WorldO` INT NOT NULL, `RallyPoint` SMALLINT UNSIGNED NOT NULL, `BagBuy` TINYINT UNSIGNED NOT NULL, `Skills` INT UNSIGNED NOT NULL, `Online` TINYINT UNSIGNED NOT NULL, PRIMARY KEY (`Characters_value_ID`), UNIQUE INDEX (`CharacterId`)) AUTO_INCREMENT=0
+[20:10:22] D DataConnection : SQL NonQuery exec time 0ms
+[20:10:22] D DataConnection : SQL: UPDATE `Characters_value` SET Characters_value_ID = uuid() WHERE Characters_value_ID = ''
+[20:10:22] D DataConnection : SQL NonQuery exec time 0ms
+[20:10:22] D IObjectDatabase : World->Start Server=127.0.0.1;Port=3306;Database=war_world;User Id=root;Password=123;Treat Tiny As Boolean=False...
+[20:10:22] I DBManager : Registering table: Common.Zone_Respawn
+[20:10:22] D DataConnecion : SQL: DESCRIBE `Zone_Respawns`
+[20:10:22] D DataConnection : New DB Connection
+[20:10:22] D DataConnecion : zone_respawns_id
+[20:10:22] D DataConnecion : respawnid
+[20:10:22] D DataConnecion : zoneid
+[20:10:22] D DataConnecion : realm
+[20:10:22] D DataConnecion : pinx
+[20:10:22] D DataConnecion : piny
+[20:10:22] D DataConnecion : pinz
+[20:10:22] D DataConnecion : worldo
+[20:10:22] D DataConnecion : 8 in table
+[20:10:22] D DataConnecion : SQL Select (DEFAULT) exec time 0ms
+[20:10:22] D DataConnecion : CREATE TABLE IF NOT EXISTS `Zone_Respawns` (`Zone_Respawns_ID` TEXT, `RespawnID` INT NOT NULL AUTO_INCREMENT, `ZoneID` INT NOT NULL, `Realm` TINYINT UNSIGNED NOT NULL, `PinX` SMALLINT UNSIGNED NOT NULL, `PinY` SMALLINT UNSIGNED NOT NULL, `PinZ` SMALLINT UNSIGNED NOT NULL, `WorldO` SMALLINT UNSIGNED NOT NULL, PRIMARY KEY (`RespawnID`)) AUTO_INCREMENT=0
+[20:10:22] D DataConnection : SQL: CREATE TABLE IF NOT EXISTS `Zone_Respawns` (`Zone_Respawns_ID` TEXT, `RespawnID` INT NOT NULL AUTO_INCREMENT, `ZoneID` INT NOT NULL, `Realm` TINYINT UNSIGNED NOT NULL, `PinX` SMALLINT UNSIGNED NOT NULL, `PinY` SMALLINT UNSIGNED NOT NULL, `PinZ` SMALLINT UNSIGNED NOT NULL, `WorldO` SMALLINT UNSIGNED NOT NULL, PRIMARY KEY (`RespawnID`)) AUTO_INCREMENT=0
+[20:10:22] D DataConnection : SQL NonQuery exec time 0ms
+[20:10:22] D DataConnection : SQL: UPDATE `Zone_Respawns` SET Zone_Respawns_ID = uuid() WHERE Zone_Respawns_ID = ''
+[20:10:22] D DataConnection : SQL NonQuery exec time 0ms
+[20:10:22] I DBManager : Registering table: Common.Quest_Objectives
+[20:10:22] D DataConnecion : SQL: DESCRIBE `Quests_Objectives`
+[20:10:22] D DataConnecion : guid
+[20:10:22] D DataConnecion : entry
+[20:10:22] D DataConnecion : objtype
+[20:10:22] D DataConnecion : objcount
+[20:10:22] D DataConnecion : description
+[20:10:22] D DataConnecion : objid
+[20:10:22] D DataConnecion : quests_objectives_id
+[20:10:22] D DataConnecion : 7 in table
+[20:10:22] D DataConnecion : SQL Select (DEFAULT) exec time 0ms
+[20:10:22] D DataConnecion : CREATE TABLE IF NOT EXISTS `Quests_Objectives` (`Quests_Objectives_ID` TEXT, `Guid` INT NOT NULL AUTO_INCREMENT, `Entry` SMALLINT UNSIGNED, `ObjType` INT UNSIGNED, `ObjCount` INT UNSIGNED, `Description` TEXT, `ObjID` TEXT, PRIMARY KEY (`Guid`)) AUTO_INCREMENT=0
+[20:10:22] D DataConnection : SQL: CREATE TABLE IF NOT EXISTS `Quests_Objectives` (`Quests_Objectives_ID` TEXT, `Guid` INT NOT NULL AUTO_INCREMENT, `Entry` SMALLINT UNSIGNED, `ObjType` INT UNSIGNED, `ObjCount` INT UNSIGNED, `Description` TEXT, `ObjID` TEXT, PRIMARY KEY (`Guid`)) AUTO_INCREMENT=0
+[20:10:22] D DataConnection : SQL NonQuery exec time 0ms
+[20:10:22] D DataConnection : SQL: UPDATE `Quests_Objectives` SET Quests_Objectives_ID = uuid() WHERE Quests_Objectives_ID = ''
+[20:10:22] D DataConnection : SQL NonQuery exec time 0ms
+[20:10:22] I DBManager : Registering table: Common.Creature_vendor
+[20:10:22] D DataConnecion : SQL: DESCRIBE `Creature_vendors`
+[20:10:22] D DataConnecion : entry
+[20:10:22] D DataConnecion : itemid
+[20:10:22] D DataConnecion : price
+[20:10:22] D DataConnecion : reqitems
+[20:10:22] D DataConnecion : creature_vendors_id
+[20:10:22] D DataConnecion : 5 in table
+[20:10:22] D DataConnecion : SQL Select (DEFAULT) exec time 0ms
+[20:10:22] D DataConnecion : CREATE TABLE IF NOT EXISTS `Creature_vendors` (`Creature_vendors_ID` VARCHAR(255) NOT NULL, `Entry` INT UNSIGNED NOT NULL, `ItemId` INT UNSIGNED NOT NULL, `Price` INT UNSIGNED NOT NULL, `ReqItems` VARCHAR(255) NOT NULL, PRIMARY KEY (`Creature_vendors_ID`)) AUTO_INCREMENT=0
+[20:10:22] D DataConnection : SQL: CREATE TABLE IF NOT EXISTS `Creature_vendors` (`Creature_vendors_ID` VARCHAR(255) NOT NULL, `Entry` INT UNSIGNED NOT NULL, `ItemId` INT UNSIGNED NOT NULL, `Price` INT UNSIGNED NOT NULL, `ReqItems` VARCHAR(255) NOT NULL, PRIMARY KEY (`Creature_vendors_ID`)) AUTO_INCREMENT=0
+[20:10:22] D DataConnection : SQL NonQuery exec time 0ms
+[20:10:22] D DataConnection : SQL: UPDATE `Creature_vendors` SET Creature_vendors_ID = uuid() WHERE Creature_vendors_ID = ''
+[20:10:29] D DataConnection : SQL NonQuery exec time 7457ms
+[20:10:29] N DataConnection : SQL NonQuery took 7457ms!
+UPDATE `Creature_vendors` SET Creature_vendors_ID = uuid() WHERE Creature_vendors_ID = ''
+[20:10:29] I DBManager : Registering table: Common.Creature_item
+[20:10:29] D DataConnecion : SQL: DESCRIBE `Creature_items`
+[20:10:29] D DataConnecion : entry
+[20:10:29] D DataConnecion : slotid
+[20:10:29] D DataConnecion : modelid
+[20:10:29] D DataConnecion : effectid
+[20:10:29] D DataConnecion : creature_items_id
+[20:10:29] D DataConnecion : 5 in table
+[20:10:29] D DataConnecion : SQL Select (DEFAULT) exec time 15ms
+[20:10:29] D DataConnecion : CREATE TABLE IF NOT EXISTS `Creature_items` (`Creature_items_ID` VARCHAR(255) NOT NULL, `Entry` INT UNSIGNED NOT NULL, `SlotId` SMALLINT UNSIGNED NOT NULL, `ModelId` SMALLINT UNSIGNED NOT NULL, `EffectId` INT UNSIGNED NOT NULL, PRIMARY KEY (`Creature_items_ID`)) AUTO_INCREMENT=0
+[20:10:29] D DataConnection : SQL: CREATE TABLE IF NOT EXISTS `Creature_items` (`Creature_items_ID` VARCHAR(255) NOT NULL, `Entry` INT UNSIGNED NOT NULL, `SlotId` SMALLINT UNSIGNED NOT NULL, `ModelId` SMALLINT UNSIGNED NOT NULL, `EffectId` INT UNSIGNED NOT NULL, PRIMARY KEY (`Creature_items_ID`)) AUTO_INCREMENT=0
+[20:10:29] D DataConnection : SQL NonQuery exec time 0ms
+[20:10:29] D DataConnection : SQL: UPDATE `Creature_items` SET Creature_items_ID = uuid() WHERE Creature_items_ID = ''
+[20:10:29] D DataConnection : SQL NonQuery exec time 16ms
+[20:10:29] I DBManager : Registering table: Common.Creature_text
+[20:10:29] D DataConnecion : SQL: DESCRIBE `Creature_texts`
+[20:10:29] D DataConnecion : creature_texts_id
+[20:10:29] D DataConnecion : entry
+[20:10:29] D DataConnecion : text
+[20:10:29] D DataConnecion : 3 in table
+[20:10:29] D DataConnecion : SQL Select (DEFAULT) exec time 0ms
+[20:10:29] D DataConnecion : CREATE TABLE IF NOT EXISTS `Creature_texts` (`Creature_texts_ID` VARCHAR(255) NOT NULL, `Entry` INT UNSIGNED, `Text` TEXT, PRIMARY KEY (`Creature_texts_ID`)) AUTO_INCREMENT=0
+[20:10:29] D DataConnection : SQL: CREATE TABLE IF NOT EXISTS `Creature_texts` (`Creature_texts_ID` VARCHAR(255) NOT NULL, `Entry` INT UNSIGNED, `Text` TEXT, PRIMARY KEY (`Creature_texts_ID`)) AUTO_INCREMENT=0
+[20:10:29] D DataConnection : SQL NonQuery exec time 0ms
+[20:10:29] D DataConnection : SQL: UPDATE `Creature_texts` SET Creature_texts_ID = uuid() WHERE Creature_texts_ID = ''
+[20:10:29] D DataConnection : SQL NonQuery exec time 0ms
+[20:10:29] I DBManager : Registering table: Common.GameObject_proto
+[20:10:29] D DataConnecion : SQL: DESCRIBE `GameObject_protos`
+[20:10:29] D DataConnecion : gameobject_protos_id
+[20:10:29] D DataConnecion : entry
+[20:10:29] D DataConnecion : name
+[20:10:29] D DataConnecion : displayid
+[20:10:29] D DataConnecion : scale
+[20:10:29] D DataConnecion : level
+[20:10:29] D DataConnecion : faction
+[20:10:29] D DataConnecion : healthpoints
+[20:10:29] D DataConnecion : attacktime
+[20:10:29] D DataConnecion : mindamage
+[20:10:29] D DataConnecion : maxdamage
+[20:10:29] D DataConnecion : unks
+[20:10:29] D DataConnecion : scriptname
+[20:10:29] D DataConnecion : tokunlock
+[20:10:29] D DataConnecion : 14 in table
+[20:10:29] D DataConnecion : SQL Select (DEFAULT) exec time 0ms
+[20:10:29] D DataConnecion : CREATE TABLE IF NOT EXISTS `GameObject_protos` (`GameObject_protos_ID` VARCHAR(255) NOT NULL, `Entry` INT UNSIGNED NOT NULL, `Name` VARCHAR(255), `DisplayID` SMALLINT UNSIGNED, `Scale` SMALLINT UNSIGNED, `Level` TINYINT UNSIGNED, `Faction` TINYINT UNSIGNED, `HealthPoints` INT UNSIGNED, `AttackTime` INT UNSIGNED, `MinDamage` INT UNSIGNED, `MaxDamage` INT UNSIGNED, `TokUnlock` INT UNSIGNED, `Unks` TEXT, `ScriptName` VARCHAR(255), PRIMARY KEY (`GameObject_protos_ID`), UNIQUE INDEX (`Entry`)) AUTO_INCREMENT=0
+[20:10:29] D DataConnection : SQL: CREATE TABLE IF NOT EXISTS `GameObject_protos` (`GameObject_protos_ID` VARCHAR(255) NOT NULL, `Entry` INT UNSIGNED NOT NULL, `Name` VARCHAR(255), `DisplayID` SMALLINT UNSIGNED, `Scale` SMALLINT UNSIGNED, `Level` TINYINT UNSIGNED, `Faction` TINYINT UNSIGNED, `HealthPoints` INT UNSIGNED, `AttackTime` INT UNSIGNED, `MinDamage` INT UNSIGNED, `MaxDamage` INT UNSIGNED, `TokUnlock` INT UNSIGNED, `Unks` TEXT, `ScriptName` VARCHAR(255), PRIMARY KEY (`GameObject_protos_ID`), UNIQUE INDEX (`Entry`)) AUTO_INCREMENT=0
+[20:10:29] D DataConnection : SQL NonQuery exec time 0ms
+[20:10:29] D DataConnection : SQL: UPDATE `GameObject_protos` SET GameObject_protos_ID = uuid() WHERE GameObject_protos_ID = ''
+[20:10:29] D DataConnection : SQL NonQuery exec time 0ms
+[20:10:29] I DBManager : Registering table: Common.Zone_Taxi
+[20:10:29] D DataConnecion : SQL: DESCRIBE `Zone_Taxis`
+[20:10:29] D DataConnecion : zone_taxis_id
+[20:10:29] D DataConnecion : zoneid
+[20:10:29] D DataConnecion : realmid
+[20:10:29] D DataConnecion : worldx
+[20:10:29] D DataConnecion : worldy
+[20:10:29] D DataConnecion : worldz
+[20:10:29] D DataConnecion : worldo
+[20:10:29] D DataConnecion : 7 in table
+[20:10:29] D DataConnecion : SQL Select (DEFAULT) exec time 0ms
+[20:10:29] D DataConnecion : CREATE TABLE IF NOT EXISTS `Zone_Taxis` (`Zone_Taxis_ID` VARCHAR(255) NOT NULL, `ZoneID` SMALLINT UNSIGNED, `RealmID` TINYINT UNSIGNED, `WorldX` INT UNSIGNED, `WorldY` INT UNSIGNED, `WorldZ` SMALLINT UNSIGNED, `WorldO` SMALLINT UNSIGNED, PRIMARY KEY (`Zone_Taxis_ID`)) AUTO_INCREMENT=0
+[20:10:29] D DataConnection : SQL: CREATE TABLE IF NOT EXISTS `Zone_Taxis` (`Zone_Taxis_ID` VARCHAR(255) NOT NULL, `ZoneID` SMALLINT UNSIGNED, `RealmID` TINYINT UNSIGNED, `WorldX` INT UNSIGNED, `WorldY` INT UNSIGNED, `WorldZ` SMALLINT UNSIGNED, `WorldO` SMALLINT UNSIGNED, PRIMARY KEY (`Zone_Taxis_ID`)) AUTO_INCREMENT=0
+[20:10:29] D DataConnection : SQL NonQuery exec time 0ms
+[20:10:29] D DataConnection : SQL: UPDATE `Zone_Taxis` SET Zone_Taxis_ID = uuid() WHERE Zone_Taxis_ID = ''
+[20:10:29] D DataConnection : SQL NonQuery exec time 0ms
+[20:10:29] I DBManager : Registering table: Common.Item_Info
+[20:10:29] D DataConnecion : SQL: DESCRIBE `Item_Infos`
+[20:10:29] D DataConnecion : entry
+[20:10:29] D DataConnecion : name
+[20:10:29] D DataConnecion : description
+[20:10:29] D DataConnecion : type
+[20:10:29] D DataConnecion : race
+[20:10:29] D DataConnecion : modelid
+[20:10:29] D DataConnecion : slotid
+[20:10:29] D DataConnecion : rarity
+[20:10:29] D DataConnecion : career
+[20:10:29] D DataConnecion : skills
+[20:10:29] D DataConnecion : icon
+[20:10:29] D DataConnecion : bind
+[20:10:29] D DataConnecion : armor
+[20:10:29] D DataConnecion : spellid
+[20:10:29] D DataConnecion : dps
+[20:10:29] D DataConnecion : speed
+[20:10:29] D DataConnecion : minrank
+[20:10:29] D DataConnecion : minrenown
+[20:10:29] D DataConnecion : startquest
+[20:10:29] D DataConnecion : stats
+[20:10:29] D DataConnecion : sellprice
+[20:10:29] D DataConnecion : talismanslots
+[20:10:29] D DataConnecion : maxstack
+[20:10:29] D DataConnecion : scriptname
+[20:10:29] D DataConnecion : item_infos_id
+[20:10:29] D DataConnecion : 25 in table
+[20:10:29] D DataConnecion : SQL Select (DEFAULT) exec time 0ms
+[20:10:29] D DataConnecion : CREATE TABLE IF NOT EXISTS `Item_Infos` (`Item_Infos_ID` VARCHAR(255) NOT NULL, `Entry` INT UNSIGNED, `Name` VARCHAR(255), `Description` VARCHAR(255), `Type` TINYINT UNSIGNED, `Race` TINYINT UNSIGNED, `ModelId` INT UNSIGNED, `SlotId` SMALLINT UNSIGNED, `Rarity` TINYINT UNSIGNED, `Career` INT UNSIGNED, `Skills` INT UNSIGNED, `Icon` INT, `Bind` TINYINT UNSIGNED, `Armor` SMALLINT UNSIGNED, `SpellId` INT, `Dps` SMALLINT UNSIGNED, `Speed` SMALLINT UNSIGNED, `MinRank` TINYINT UNSIGNED, `MinRenown` TINYINT UNSIGNED, `StartQuest` INT, `Stats` TEXT, `SellPrice` INT UNSIGNED, `TalismanSlots` TINYINT UNSIGNED, `MaxStack` SMALLINT UNSIGNED, `ScriptName` VARCHAR(255), PRIMARY KEY (`Item_Infos_ID`), UNIQUE INDEX (`Entry`)) AUTO_INCREMENT=0
+[20:10:29] D DataConnection : SQL: CREATE TABLE IF NOT EXISTS `Item_Infos` (`Item_Infos_ID` VARCHAR(255) NOT NULL, `Entry` INT UNSIGNED, `Name` VARCHAR(255), `Description` VARCHAR(255), `Type` TINYINT UNSIGNED, `Race` TINYINT UNSIGNED, `ModelId` INT UNSIGNED, `SlotId` SMALLINT UNSIGNED, `Rarity` TINYINT UNSIGNED, `Career` INT UNSIGNED, `Skills` INT UNSIGNED, `Icon` INT, `Bind` TINYINT UNSIGNED, `Armor` SMALLINT UNSIGNED, `SpellId` INT, `Dps` SMALLINT UNSIGNED, `Speed` SMALLINT UNSIGNED, `MinRank` TINYINT UNSIGNED, `MinRenown` TINYINT UNSIGNED, `StartQuest` INT, `Stats` TEXT, `SellPrice` INT UNSIGNED, `TalismanSlots` TINYINT UNSIGNED, `MaxStack` SMALLINT UNSIGNED, `ScriptName` VARCHAR(255), PRIMARY KEY (`Item_Infos_ID`), UNIQUE INDEX (`Entry`)) AUTO_INCREMENT=0
+[20:10:29] D DataConnection : SQL NonQuery exec time 0ms
+[20:10:29] D DataConnection : SQL: UPDATE `Item_Infos` SET Item_Infos_ID = uuid() WHERE Item_Infos_ID = ''
+[20:10:37] D DataConnection : SQL NonQuery exec time 8190ms
+[20:10:37] N DataConnection : SQL NonQuery took 8190ms!
+UPDATE `Item_Infos` SET Item_Infos_ID = uuid() WHERE Item_Infos_ID = ''
+[20:10:37] I DBManager : Registering table: Common.GameObject_spawn
+[20:10:37] D DataConnecion : SQL: DESCRIBE `GameObject_spawns`
+[20:10:37] D DataConnecion : gameobject_spawns_id
+[20:10:37] D DataConnecion : guid
+[20:10:37] D DataConnecion : entry
+[20:10:37] D DataConnecion : zoneid
+[20:10:37] D DataConnecion : worldx
+[20:10:37] D DataConnecion : worldy
+[20:10:37] D DataConnecion : worldz
+[20:10:37] D DataConnecion : worldo
+[20:10:37] D DataConnecion : displayid
+[20:10:37] D DataConnecion : 9 in table
+[20:10:37] D DataConnecion : SQL Select (DEFAULT) exec time 0ms
+[20:10:37] D DataConnecion : CREATE TABLE IF NOT EXISTS `GameObject_spawns` (`GameObject_spawns_ID` TEXT, `Guid` INT NOT NULL AUTO_INCREMENT, `Entry` INT UNSIGNED, `ZoneId` SMALLINT UNSIGNED, `WorldX` INT, `WorldY` INT, `WorldZ` INT, `WorldO` INT, `DisplayID` INT UNSIGNED, PRIMARY KEY (`Guid`)) AUTO_INCREMENT=0
+[20:10:37] D DataConnection : SQL: CREATE TABLE IF NOT EXISTS `GameObject_spawns` (`GameObject_spawns_ID` TEXT, `Guid` INT NOT NULL AUTO_INCREMENT, `Entry` INT UNSIGNED, `ZoneId` SMALLINT UNSIGNED, `WorldX` INT, `WorldY` INT, `WorldZ` INT, `WorldO` INT, `DisplayID` INT UNSIGNED, PRIMARY KEY (`Guid`)) AUTO_INCREMENT=0
+[20:10:37] D DataConnection : SQL NonQuery exec time 0ms
+[20:10:37] D DataConnection : SQL: UPDATE `GameObject_spawns` SET GameObject_spawns_ID = uuid() WHERE GameObject_spawns_ID = ''
+[20:10:37] D DataConnection : SQL NonQuery exec time 0ms
+[20:10:37] I DBManager : Registering table: Common.CharacterInfo_stats
+[20:10:37] D DataConnecion : SQL: DESCRIBE `CharacterInfo_stats`
+[20:10:37] D DataConnecion : careerline
+[20:10:37] D DataConnecion : level
+[20:10:37] D DataConnecion : statid
+[20:10:37] D DataConnecion : statvalue
+[20:10:37] D DataConnecion : characterinfo_stats_id
+[20:10:37] D DataConnecion : 5 in table
+[20:10:37] D DataConnecion : SQL Select (DEFAULT) exec time 16ms
+[20:10:37] D DataConnecion : CREATE TABLE IF NOT EXISTS `CharacterInfo_stats` (`CharacterInfo_stats_ID` VARCHAR(255) NOT NULL, `CareerLine` TINYINT UNSIGNED NOT NULL, `Level` TINYINT UNSIGNED NOT NULL, `StatId` TINYINT UNSIGNED NOT NULL, `StatValue` SMALLINT UNSIGNED NOT NULL, PRIMARY KEY (`CharacterInfo_stats_ID`)) AUTO_INCREMENT=0
+[20:10:37] D DataConnection : SQL: CREATE TABLE IF NOT EXISTS `CharacterInfo_stats` (`CharacterInfo_stats_ID` VARCHAR(255) NOT NULL, `CareerLine` TINYINT UNSIGNED NOT NULL, `Level` TINYINT UNSIGNED NOT NULL, `StatId` TINYINT UNSIGNED NOT NULL, `StatValue` SMALLINT UNSIGNED NOT NULL, PRIMARY KEY (`CharacterInfo_stats_ID`)) AUTO_INCREMENT=0
+[20:10:38] D DataConnection : SQL NonQuery exec time 436ms
+[20:10:38] D DataConnection : SQL: UPDATE `CharacterInfo_stats` SET CharacterInfo_stats_ID = uuid() WHERE CharacterInfo_stats_ID = ''
+[20:10:38] D DataConnection : SQL NonQuery exec time 32ms
+[20:10:38] I DBManager : Registering table: Common.Ability_Info
+[20:10:38] D DataConnecion : SQL: DESCRIBE `Ability_Infos`
+[20:10:38] D DataConnecion : ability_infos_id
+[20:10:38] D DataConnecion : entry
+[20:10:38] D DataConnecion : level
+[20:10:38] D DataConnecion : abilitytype
+[20:10:38] D DataConnecion : minrange
+[20:10:38] D DataConnecion : maxrange
+[20:10:38] D DataConnecion : casttime
+[20:10:38] D DataConnecion : cooldown
+[20:10:38] D DataConnecion : targettype
+[20:10:38] D DataConnecion : damage
+[20:10:38] D DataConnecion : actionpoints
+[20:10:38] D DataConnecion : careerline
+[20:10:38] D DataConnecion : 12 in table
+[20:10:38] D DataConnecion : SQL Select (DEFAULT) exec time 0ms
+[20:10:38] D DataConnecion : CREATE TABLE IF NOT EXISTS `Ability_Infos` (`Ability_Infos_ID` VARCHAR(255) NOT NULL, `Entry` SMALLINT UNSIGNED, `Level` TINYINT UNSIGNED, `CareerLine` TINYINT UNSIGNED, `AbilityType` SMALLINT UNSIGNED, `MinRange` INT, `MaxRange` INT, `CastTime` INT, `CoolDown` INT, `TargetType` TINYINT UNSIGNED, `Damage` INT, `ActionPoints` SMALLINT UNSIGNED, PRIMARY KEY (`Ability_Infos_ID`)) AUTO_INCREMENT=0
+[20:10:38] D DataConnection : SQL: CREATE TABLE IF NOT EXISTS `Ability_Infos` (`Ability_Infos_ID` VARCHAR(255) NOT NULL, `Entry` SMALLINT UNSIGNED, `Level` TINYINT UNSIGNED, `CareerLine` TINYINT UNSIGNED, `AbilityType` SMALLINT UNSIGNED, `MinRange` INT, `MaxRange` INT, `CastTime` INT, `CoolDown` INT, `TargetType` TINYINT UNSIGNED, `Damage` INT, `ActionPoints` SMALLINT UNSIGNED, PRIMARY KEY (`Ability_Infos_ID`)) AUTO_INCREMENT=0
+[20:10:38] D DataConnection : SQL NonQuery exec time 140ms
+[20:10:38] D DataConnection : SQL: UPDATE `Ability_Infos` SET Ability_Infos_ID = uuid() WHERE Ability_Infos_ID = ''
+[20:10:38] D DataConnection : SQL NonQuery exec time 0ms
+[20:10:38] I DBManager : Registering table: Common.Creature_proto
+[20:10:38] D DataConnecion : SQL: DESCRIBE `Creature_protos`
+[20:10:38] D DataConnecion : entry
+[20:10:38] D DataConnecion : name
+[20:10:38] D DataConnecion : model1
+[20:10:38] D DataConnecion : model2
+[20:10:38] D DataConnecion : minscale
+[20:10:38] D DataConnecion : maxscale
+[20:10:38] D DataConnecion : minlevel
+[20:10:38] D DataConnecion : maxlevel
+[20:10:38] D DataConnecion : faction
+[20:10:38] D DataConnecion : ranged
+[20:10:38] D DataConnecion : bytes
+[20:10:38] D DataConnecion : icone
+[20:10:38] D DataConnecion : emote
+[20:10:38] D DataConnecion : title
+[20:10:38] D DataConnecion : unk
+[20:10:38] D DataConnecion : unk1
+[20:10:38] D DataConnecion : unk2
+[20:10:38] D DataConnecion : unk3
+[20:10:38] D DataConnecion : unk4
+[20:10:38] D DataConnecion : unk5
+[20:10:38] D DataConnecion : unk6
+[20:10:38] D DataConnecion : flag
+[20:10:38] D DataConnecion : scriptname
+[20:10:38] D DataConnecion : creature_protos_id
+[20:10:38] D DataConnecion : 24 in table
+[20:10:38] D DataConnecion : SQL Select (DEFAULT) exec time 0ms
+[20:10:38] D DataConnecion : CREATE TABLE IF NOT EXISTS `Creature_protos` (`Creature_protos_ID` VARCHAR(255) NOT NULL, `Entry` INT UNSIGNED NOT NULL, `Name` VARCHAR(255) NOT NULL, `Model1` SMALLINT UNSIGNED NOT NULL, `Model2` SMALLINT UNSIGNED NOT NULL, `MinScale` SMALLINT UNSIGNED NOT NULL, `MaxScale` SMALLINT UNSIGNED NOT NULL, `MinLevel` TINYINT UNSIGNED NOT NULL, `MaxLevel` TINYINT UNSIGNED NOT NULL, `Faction` TINYINT UNSIGNED NOT NULL, `Ranged` TINYINT UNSIGNED NOT NULL, `Bytes` VARCHAR(255) NOT NULL, `Icone` TINYINT UNSIGNED NOT NULL, `Emote` TINYINT UNSIGNED NOT NULL, `Title` SMALLINT UNSIGNED NOT NULL, `Unk` SMALLINT UNSIGNED NOT NULL, `Unk1` SMALLINT UNSIGNED NOT NULL, `Unk2` SMALLINT UNSIGNED NOT NULL, `Unk3` SMALLINT UNSIGNED NOT NULL, `Unk4` SMALLINT UNSIGNED NOT NULL, `Unk5` SMALLINT UNSIGNED NOT NULL, `Unk6` SMALLINT UNSIGNED NOT NULL, `Flag` VARCHAR(255) NOT NULL, `ScriptName` VARCHAR(255) NOT NULL, PRIMARY KEY (`Creature_protos_ID`), UNIQUE INDEX (`Entry`)) AUTO_INCREMENT=0
+[20:10:38] D DataConnection : SQL: CREATE TABLE IF NOT EXISTS `Creature_protos` (`Creature_protos_ID` VARCHAR(255) NOT NULL, `Entry` INT UNSIGNED NOT NULL, `Name` VARCHAR(255) NOT NULL, `Model1` SMALLINT UNSIGNED NOT NULL, `Model2` SMALLINT UNSIGNED NOT NULL, `MinScale` SMALLINT UNSIGNED NOT NULL, `MaxScale` SMALLINT UNSIGNED NOT NULL, `MinLevel` TINYINT UNSIGNED NOT NULL, `MaxLevel` TINYINT UNSIGNED NOT NULL, `Faction` TINYINT UNSIGNED NOT NULL, `Ranged` TINYINT UNSIGNED NOT NULL, `Bytes` VARCHAR(255) NOT NULL, `Icone` TINYINT UNSIGNED NOT NULL, `Emote` TINYINT UNSIGNED NOT NULL, `Title` SMALLINT UNSIGNED NOT NULL, `Unk` SMALLINT UNSIGNED NOT NULL, `Unk1` SMALLINT UNSIGNED NOT NULL, `Unk2` SMALLINT UNSIGNED NOT NULL, `Unk3` SMALLINT UNSIGNED NOT NULL, `Unk4` SMALLINT UNSIGNED NOT NULL, `Unk5` SMALLINT UNSIGNED NOT NULL, `Unk6` SMALLINT UNSIGNED NOT NULL, `Flag` VARCHAR(255) NOT NULL, `ScriptName` VARCHAR(255) NOT NULL, PRIMARY KEY (`Creature_protos_ID`), UNIQUE INDEX (`Entry`)) AUTO_INCREMENT=0
+[20:10:38] D DataConnection : SQL NonQuery exec time 0ms
+[20:10:38] D DataConnection : SQL: UPDATE `Creature_protos` SET Creature_protos_ID = uuid() WHERE Creature_protos_ID = ''

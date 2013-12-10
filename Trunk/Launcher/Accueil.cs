@@ -26,7 +26,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Security.Cryptography;
-
+using System.IO;
 namespace Launcher
 {
     public partial class Accueil : Form
@@ -67,6 +67,9 @@ namespace Launcher
             Client.SendTCP(Out);
             B_start.Enabled = false;
         }
+
+
+
 
         public void ReceiveStart()
         {

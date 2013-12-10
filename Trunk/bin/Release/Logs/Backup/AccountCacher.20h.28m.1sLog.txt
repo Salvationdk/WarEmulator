@@ -1,0 +1,26 @@
+[20:23:05] I DBManager : Registering table: Common.Account
+[20:23:06] N DataConnection : SQL NonQuery took 1029ms!
+CREATE TABLE IF NOT EXISTS `Accounts` (`Accounts_ID` TEXT, `AccountId` INT NOT NULL AUTO_INCREMENT, `Username` VARCHAR(255), `Password` VARCHAR(255), `Ip` VARCHAR(255), `Token` VARCHAR(255), `GmLevel` TINYINT UNSIGNED NOT NULL, PRIMARY KEY (`AccountId`), UNIQUE INDEX (`Username`)) AUTO_INCREMENT=0
+[20:23:06] I DBManager : Registering table: Common.Realm
+[20:23:06] S RpcServer : Listening on : 127.0.0.1:6800
+[20:23:06] I AddRealm : New Realm : Aps
+[20:23:06] I ConsoleMgr : Commands list : 
+[20:23:06] I ConsoleMgr : .create : New Account <Username,Password>
+[20:23:06] S ServerMgr : [-874742587]	| LauncherServer| 127.0.0.1:6001 | Connected
+[20:23:06] S ServerMgr : [1599241974]	| LobbyServer| 127.0.0.1:6002 | Connected
+[20:23:20] S ServerMgr : [-1757294038]	| WorldServer-1| 127.0.0.1:6003 | Connected
+[20:23:20] I GetRealm : RealmId = 1
+[20:23:23] I GetRealm : RealmId = 1
+[20:23:23] S Realm : Realm (Aps) online at 127.0.0.1:6003
+[20:23:31] I CheckAccount : z : System.Byte[]
+[20:23:31] I GetAccount : z
+[20:23:31] I LoadAccount : z
+[20:23:31] E Cp : .z:z.
+[20:23:31] I GenerateToken : z
+[20:23:31] I GetAccount : z
+[20:23:31] I LoadAccount : z
+[20:24:21] I BuildRealm : Sending 1 realm(s)
+[20:24:24] I GetAccount : z
+[20:24:24] I LoadAccount : z
+[20:24:24] I GetAccount : z
+[20:24:24] I LoadAccount : z

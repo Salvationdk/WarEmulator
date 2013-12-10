@@ -1,0 +1,44 @@
+[16:20:13] I DBManager : Registering table: Common.Account
+[16:20:13] I DBManager : Registering table: Common.Realm
+[16:20:13] S RpcServer : Listening on : 127.0.0.1:6800
+[16:20:13] I AddRealm : New Realm : Aps
+[16:20:13] I ConsoleMgr : Commands list : 
+[16:20:13] I ConsoleMgr : .create : New Account <Username,Password>
+[16:20:13] S ServerMgr : [718874088]	| LauncherServer| 127.0.0.1:6001 | Connected
+[16:20:14] S ServerMgr : [-215212971]	| LobbyServer| 127.0.0.1:6002 | Connected
+[16:20:18] S ServerMgr : [1741430662]	| WorldServer-1| 127.0.0.1:6003 | Connected
+[16:20:18] I GetRealm : RealmId = 1
+[16:20:21] I GetRealm : RealmId = 1
+[16:20:21] S Realm : Realm (Aps) online at 127.0.0.1:6003
+[16:20:23] I CheckAccount : z : System.Byte[]
+[16:20:23] I GetAccount : z
+[16:20:23] I LoadAccount : z
+[16:20:23] E Cp : .z:z.
+[16:20:23] I GenerateToken : z
+[16:20:23] I GetAccount : z
+[16:20:23] I LoadAccount : z
+[16:21:00] I CheckAccount : z : System.Byte[]
+[16:21:00] I GetAccount : z
+[16:21:00] I LoadAccount : z
+[16:21:00] E Cp : .z:z.
+[16:21:00] I GenerateToken : z
+[16:21:00] I GetAccount : z
+[16:21:00] I LoadAccount : z
+[16:21:14] E RpcServer : System.Net.Sockets.SocketException (0x80004005): An existing connection was forcibly closed by the remote host
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Runtime.Remoting.Channels.SocketStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.Runtime.Remoting.Channels.ChunkedMemoryStream.WriteTo(Stream stream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientSocketHandler.GetRequestStream(IMessage msg, Int32 contentLength, ITransportHeaders headers)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientSocketHandler.SendRequest(IMessage msg, ITransportHeaders headers, Stream contentStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at FrameWork.ClientMgr.Ping()
+   at FrameWork.RpcServer.Ping() in C:\Users\FN\Documents\GitHub\WarEmulator\Trunk\FrameWork\Remoting\RpcServer.cs:line 128
+[16:21:14] N RpcServer : [-215212971]	| LobbyServer| 127.0.0.1:6002 | Disconnected

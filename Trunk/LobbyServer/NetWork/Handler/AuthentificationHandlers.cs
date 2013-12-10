@@ -1,22 +1,4 @@
-﻿/*
- * Copyright (C) 2011 APS
- *	http://AllPrivateServer.com
- *
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
- */
- 
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -71,7 +53,7 @@ namespace LobbyServer.NetWork.Handler
             authReq.MergeFrom(packet.ToArray());
 
             string session = Encoding.ASCII.GetString(authReq.SessionToken.ToByteArray());
-            Log.Debug("AuthSession", "session " + session);
+           // Log.Debug("AuthSession", "session " + session);
             cclient.Username = "";                                  //username is not important anymore in 1.4.8
             cclient.Token = session;
 
@@ -86,7 +68,7 @@ namespace LobbyServer.NetWork.Handler
             cclient.SendTCPCuted(Out);
        
             
-        /*   need to check
+        /*   //TODO: need auth check
 
             if (Result != AuthResult.AUTH_SUCCESS)
                 cclient.Disconnect();
@@ -101,14 +83,12 @@ namespace LobbyServer.NetWork.Handler
         static public void CMSG_GetAcctPropListReq(BaseClient client, PacketIn packet)
         {
             Client cclient = client as Client;
-            Log.Debug("GetAcctProp", "recv");
-
 
             PacketOut Out = new PacketOut((byte)Opcodes.SMSG_GetAcctPropListReply);
             byte[] val = { 0x08, 0x00 };
             Out.Write(val);
             cclient.SendTCPCuted(Out);
-            Log.Debug("GetAcctProp", "sent");
+
         }
 
 

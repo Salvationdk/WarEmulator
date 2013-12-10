@@ -1,0 +1,325 @@
+[20:34:58] I DBManager : Registering table: Common.Character_social
+[20:34:58] I DBManager : Registering table: Common.Character_quest
+[20:34:58] I DBManager : Registering table: Common.Character_items
+[20:34:58] I DBManager : Registering table: Common.Character_ability
+[20:34:58] I DBManager : Registering table: Common.Character_tok
+[20:34:58] I DBManager : Registering table: Common.Character
+[20:34:58] I DBManager : Registering table: Common.Characters_influence
+[20:34:58] I DBManager : Registering table: Common.Character_value
+[20:34:58] I DBManager : Registering table: Common.Zone_Respawn
+[20:34:58] I DBManager : Registering table: Common.Quest_Objectives
+[20:34:58] I DBManager : Registering table: Common.Creature_vendor
+[20:34:58] I DBManager : Registering table: Common.Creature_item
+[20:34:58] I DBManager : Registering table: Common.Creature_text
+[20:34:58] I DBManager : Registering table: Common.GameObject_proto
+[20:34:58] I DBManager : Registering table: Common.Zone_Taxi
+[20:34:58] I DBManager : Registering table: Common.Item_Info
+[20:34:59] I DBManager : Registering table: Common.GameObject_spawn
+[20:34:59] I DBManager : Registering table: Common.CharacterInfo_stats
+[20:34:59] I DBManager : Registering table: Common.Ability_Info
+[20:34:59] I DBManager : Registering table: Common.Creature_proto
+[20:34:59] I DBManager : Registering table: Common.PQuest_Info
+[20:34:59] I DBManager : Registering table: Common.Random_name
+[20:34:59] I DBManager : Registering table: Common.Creature_spawn
+[20:34:59] I DBManager : Registering table: Common.Xp_Info
+[20:34:59] I DBManager : Registering table: Common.CharacterInfo
+[20:34:59] I DBManager : Registering table: Common.Renown_Info
+[20:34:59] I DBManager : Registering table: Common.Quest_Creature_Finisher
+[20:34:59] I DBManager : Registering table: Common.Tok_Info
+[20:34:59] I DBManager : Registering table: Common.Chapter_Reward
+[20:34:59] I DBManager : Registering table: Common.Zone_Info
+[20:34:59] I DBManager : Registering table: Common.Quest_Creature_Starter
+[20:34:59] I DBManager : Registering table: Common.Creature_loot
+[20:35:01] N DataConnection : SQL NonQuery took 2355ms!
+UPDATE `Creature_loots` SET Creature_loots_ID = uuid() WHERE Creature_loots_ID = ''
+[20:35:01] I DBManager : Registering table: Common.Chapter_Info
+[20:35:01] I DBManager : Registering table: Common.Quest
+[20:35:01] I DBManager : Registering table: Common.PQuest_Objective
+[20:35:01] I DBManager : Registering table: Common.CharacterInfo_item
+[20:35:01] I DBManager : Registering table: Common.Zone_Area
+[20:35:01] N ClientMgr : [-1477604509]	| LauncherServer| 127.0.0.1:6001 | Connected
+[20:35:01] N ClientMgr : [2026912884]	| LobbyServer| 127.0.0.1:6002 | Connected
+[20:35:01] S RpcClient : Connected to : 127.0.0.1:6800, Listen on : 127.0.0.1:6003
+[20:35:01] N ClientMgr : Server connected !
+[20:35:01] I AbilityMgr : Registering Ability Type : Deal Damage Handler(1)
+[20:35:02] S AbilityMgr : Loaded 41 Ability Info
+[20:35:02] S LoadZone_Info : Loaded 91 Zone_Info
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone205/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone005/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone003/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone205/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone100/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone107/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone100/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone101/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone200/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone008/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone209/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone003/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone108/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone005/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone100/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone205/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone209/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone001/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone109/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone105/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone101/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone108/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone005/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone102/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone105/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone103/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone201/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone103/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone009/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone202/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone107/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone009/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone209/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone002/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone102/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone008/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone101/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone106/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone105/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone011/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone007/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone108/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone102/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone205/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone201/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone207/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone006/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone102/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone009/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone205/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone009/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone100/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone001/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone009/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone200/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone105/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone202/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone200/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone005/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone011/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone109/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone202/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone203/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone206/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone109/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone007/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone101/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone106/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone201/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone202/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone103/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone208/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone103/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone009/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone202/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone007/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone207/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone008/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone011/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone100/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone206/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone003/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone206/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone102/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone011/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone200/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone003/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone201/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone106/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone106/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone103/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone011/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone202/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone209/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone200/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone005/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone011/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone002/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone006/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone002/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone203/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone005/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone203/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone007/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone202/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone201/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone009/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone208/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone200/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone009/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone109/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone002/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone001/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone108/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone200/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone007/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone006/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone208/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone003/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone008/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone007/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone201/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone202/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone006/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone103/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone107/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone100/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone105/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone008/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone107/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone200/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone102/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone011/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone201/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone208/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone207/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone105/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone205/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone203/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone106/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone108/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone102/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone109/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone007/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone207/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone205/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone203/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone106/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone101/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone209/mappieces.csv
+[20:35:02] E WorldMgr : Invalid Piece File Directory : zones/zone201/mappieces.csv
+[20:35:02] S LoadZone_Info : Loaded 326 Zone_Area && 0 Piece Informations
+[20:35:02] S LoadZone_Info : Loaded 1 Zone_Respawn
+[20:35:02] S LoadZone_Info : Loaded 0 Zone_Taxis
+[20:35:02] S LoadChapter_Infos : Loaded 0 Chapter_Infos
+[20:35:02] S LoadChapter_Infos : Loaded 11522 Chapter_Rewards
+[20:35:02] S WorldMgr : Loaded 293 Public Quests Info
+[20:35:02] S WorldMgr : Loaded 0 Public Quest Objectives
+[20:35:02] S LoadTok_Infos : Loaded 0 Tok_Infos
+[20:35:02] S LoadXp_Info : Loaded 0 Xp_Infos
+[20:35:02] S LoadRenown_Info : Loaded 80 Renown_Info
+[20:35:02] S LoadCreatureProto : Loaded 2162 Creature_Protos
+[20:35:02] S WorldMgr : Loaded 290 Creature Texts
+[20:35:02] S LoadCreatureItems : Loaded 9220 Creature_Items
+[20:35:02] S WorldMgr : Loaded 579 GameObject_Protos
+[20:35:02] S LoadCreatureSpawns : Loaded 15349 Creature_Spawns
+[20:35:02] S WorldMgr : Loaded 2178 GameObject_Spawns
+[20:35:03] S LoadQuestsObjectives : Loaded 0 Quests Objectives
+[20:35:03] S LoadQuests : Loaded 5128 Quests
+[20:35:03] S LoadCreatureQuests : Loaded 0 Quests Creature Starter
+[20:35:03] S LoadCreatureQuests : Loaded 1746 Quests Creature Finisher
+[20:35:03] S CharacterMgr : Loaded 24 CharacterInfo
+[20:35:03] S CharacterMgr : Loaded 24 CharacterInfo_Item
+[20:35:03] S LoadCharacters : 7  : Character(s) loaded
+[20:35:03] S CharacterMgr : Loaded 14400 CharacterInfo_Stats
+[20:35:03] S LoadItems : 33 : Characters items loaded
+[20:35:04] N DataConnecion : SQL Select (DEFAULT) took 2090ms!
+SELECT `Item_Infos_ID`, `Entry`, `Name`, `Description`, `Type`, `Race`, `ModelId`, `SlotId`, `Rarity`, `Career`, `Skills`, `Icon`, `Bind`, `Armor`, `SpellId`, `Dps`, `Speed`, `MinRank`, `MinRenown`, `StartQuest`, `Stats`, `SellPrice`, `TalismanSlots`, `MaxStack`, `ScriptName` FROM `Item_Infos`
+[20:35:04] S LoadItem_Info : Loaded 74801 Item_Info
+[20:35:04] S LoadRelation : Loading Relations
+[20:35:04] E LoadRegionSpawns : [2060] Invalid Spawns
+[20:35:04] S Region : [Nordland] : 4371
+[20:35:04] S Region : [Norsca] : 2257
+[20:35:04] S Region : [Altdorf] : 666
+[20:35:04] S Region : [Ostland] : 1452
+[20:35:04] S Region : [Troll Country] : 100
+[20:35:04] S Region : [Ekrund] : 942
+[20:35:04] S Region : [Kadrin Valley Pass] : 35
+[20:35:04] S Region : [Black Crag Keep] : 4
+[20:35:04] S Region : [Mount Bloodhorn] : 1709
+[20:35:04] S Region : [Death Peak] : 1
+[20:35:04] S Region : [Doomfist Crater] : 4
+[20:35:04] S Region : [Marshes of Madness] : 1
+[20:35:04] S Region : [The Inevitable City] : 795
+[20:35:04] S Region : [The Blighted Isle] : 3047
+[20:35:04] S Region : [Black Fire Basin] : 11
+[20:35:04] S Region : [Chrace] : 48
+[20:35:04] S Region : [Gates of Ekrund] : 2
+[20:35:04] S Region : [Thunder Valley] : 7
+[20:35:04] S Region : [Logrin's Forge] : 1
+[20:35:04] S Region : [Mourkain Temple] : 4
+[20:35:04] S Region : [Nordenwatch] : 10
+[20:35:04] S LoadChapters : Loading Zone from Chapters
+[20:35:04] S LoadCreatureQuests : Loaded 0 Quests Creature Starter
+[20:35:04] S LoadCreatureQuests : Loaded 1746 Quests Creature Finisher
+[20:35:04] S LoaderMgr : Loading complete in : 2752ms
+[20:35:04] I TCPManager : Starting...
+[20:35:04] I TCPManager : Loading the Packet Handler
+[20:35:05] I TCPManager : Loading Crypt Handler
+[20:35:05] S TCPManager : Server listening to : 0.0.0.0:10622
+[20:35:05] I ConsoleMgr : Commands list : 
+[20:35:20] I TCPManager : New Connection : 127.0.0.1:53287
+[20:35:21] S F_CONNECT : MeId=10
+[20:35:21] E TCPManager : Can not Handle opcode :4(00000004)
+[20:35:22] E TCPManager : Can not Handle opcode :4(00000004)
+[20:35:24] S Player : CreatePlayer
+[20:35:24] S Player : Construction de Bw
+[20:35:24] E TCPManager : Can not Handle opcode :4(00000004)
+[20:35:27] E TCPManager : Can not Handle opcode :200(000000C8)
+[20:35:27] E TCPManager : Can not Handle opcode :200(000000C8)
+[20:35:27] E TCPManager : Can not Handle opcode :200(000000C8)
+[20:35:27] E TCPManager : Can not Handle opcode :200(000000C8)
+[20:35:27] S F_INIT_PLAYER : Lancement !
+[20:35:27] S GetRegion : RegionId=8
+[20:35:27] S GetZoneRegion : RegionId=8
+[20:35:28] E RegionMgr : [8] La region lag, 1 objets! 155ms
+[20:35:28] I AddEventNotify : [Bw] Add de :Playing
+[20:35:28] S EquipItem : Itm=Ragged Peasant Boots
+[20:35:28] S EquipItem : Itm=Dull Charred Staff
+[20:35:28] S EquipItem : Itm=Torn Charred Shirt
+[20:35:28] S SocialInterface : Loaded 0 Socials of 2
+[20:35:28] S CellMgr[202,227] : Loading... 
+[20:35:28] S CellMgr[202,228] : Loading... 
+[20:35:28] S CellMgr[202,229] : Loading... 
+[20:35:28] S CellMgr[203,227] : Loading... 
+[20:35:28] S CellMgr[203,228] : Loading... 
+[20:35:28] S CellMgr[203,229] : Loading... 
+[20:35:28] S CellMgr[204,227] : Loading... 
+[20:35:28] S CellMgr[204,228] : Loading... 
+[20:35:28] S CellMgr[204,229] : Loading... 
+[20:35:28] I AbilityInterface : Sending 1 Abilities
+[20:35:28] I QuestInterface : Sended Quest : 0
+[20:35:28] E TCPManager : Can not Handle opcode :200(000000C8)
+[20:35:28] E TCPManager : Can not Handle opcode :159(0000009F)
+[20:35:28] I BaseClient : disconnected  An existing connection was forcibly closed by the remote host
+[20:35:28] S GameClient : Deconnexion disconnected,Id=10
+[20:35:28] S RemoveObject : Bw
+[20:35:31] S CombatStart : Griffon Striker Start combat with Raven Hellservant
+[20:35:31] S CombatStart : Raven Hellservant Start combat with Griffon Striker
+[20:35:31] S CombatStart : Griffon Striker Start combat with Raven Hellservant
+[20:35:31] S CombatStart : Raven Hellservant Start combat with Griffon Striker
+[20:35:31] S CombatStart : Griffon Striker Start combat with Raven Hellservant
+[20:35:31] S CombatStart : Raven Hellservant Start combat with Griffon Striker
+[20:35:31] S CombatStart : Griffon Striker Start combat with Raven Hellservant
+[20:35:31] S CombatStart : Raven Hellservant Start combat with Griffon Striker
+[20:35:31] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:35:31] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:35:31] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:35:31] S CombatStart : Griffon Striker Start combat with Marauder
+[20:35:31] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:35:31] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:35:31] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:35:31] S CombatStart : Griffon Striker Start combat with Marauder
+[20:35:31] S CombatStart : Grimmenhagen Villager Start combat with Marauder
+[20:35:31] S CombatStart : Griffon Striker Start combat with Marauder
+[20:35:31] S CombatStart : Marauder Start combat with Griffon Striker
+[20:35:31] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:35:31] S CombatStart : Griffon Striker Start combat with Marauder
+[20:35:31] S CombatStart : Griffon Striker Start combat with Marauder
+[20:35:31] S CombatStart : Grimmenhagen Villager Start combat with Marauder Torchbearer
+[20:35:31] S CombatStart : Marauder Start combat with Griffon Striker
+[20:35:31] S CombatStart : Marauder Start combat with Griffon Striker
+[20:35:31] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:35:31] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:35:31] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:35:31] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:35:31] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:35:31] S CombatStart : Marauder Torchbearer Start combat with Grimmenhagen Villager
+[20:35:32] S CombatStart : Marauder Start combat with Grimmenhagen Villager

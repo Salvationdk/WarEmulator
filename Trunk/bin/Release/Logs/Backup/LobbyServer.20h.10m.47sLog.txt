@@ -1,0 +1,21 @@
+[20:10:18] D RpcClient : Connect : 127.0.0.1:6800
+[20:10:18] D RpcClient : Connecting to : 127.0.0.1
+[20:10:20] D RpcClient : Listening on : 127.0.0.1:6002
+[20:10:20] D RpcClient : Registering handlers
+[20:10:20] D RpcClient : Registering : ClientMgr
+[20:10:20] N ClientMgr : [-46069619]	| LauncherServer| 127.0.0.1:6001 | Connected
+[20:10:20] S RpcClient : Connected to : 127.0.0.1:6800, Listen on : 127.0.0.1:6002
+[20:10:20] N ClientMgr : Server connected !
+[20:10:20] I TCPManager : Starting...
+[20:10:20] D TCPManager : Allocation of the buffer pool : 300
+[20:10:20] I TCPManager : Loading the Packet Handler
+[20:10:20] D TCPManager : Registering handler for opcode : 00000001
+[20:10:20] D TCPManager : Registering handler for opcode : 00000005
+[20:10:20] D TCPManager : Registering handler for opcode : 0000000D
+[20:10:20] D TCPManager : Registering handler for opcode : 0000000B
+[20:10:20] D TCPManager : Registering handler for opcode : 00000009
+[20:10:20] D TCPManager : Registering handler for opcode : 00000007
+[20:10:21] I TCPManager : Loading Crypt Handler
+[20:10:21] S TCPManager : Server listening to : 0.0.0.0:8048
+[20:10:21] I ConsoleMgr : Commands list : 
+[20:10:23] N ClientMgr : [-46069619]	| LauncherServer| 127.0.0.1:6001 | Disconnected

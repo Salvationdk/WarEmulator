@@ -1,0 +1,56 @@
+[16:16:12] D RpcClient : Connect : 127.0.0.1:6800
+[16:16:12] D RpcClient : Connecting to : 127.0.0.1
+[16:16:12] D RpcClient : Listening on : 127.0.0.1:6002
+[16:16:12] D RpcClient : Registering handlers
+[16:16:12] D RpcClient : Registering : ClientMgr
+[16:16:12] N ClientMgr : [1953747437]	| LauncherServer| 127.0.0.1:6001 | Connected
+[16:16:12] S RpcClient : Connected to : 127.0.0.1:6800, Listen on : 127.0.0.1:6002
+[16:16:12] N ClientMgr : Server connected !
+[16:16:12] I TCPManager : Starting...
+[16:16:12] D TCPManager : Allocation of the buffer pool : 300
+[16:16:12] I TCPManager : Loading the Packet Handler
+[16:16:12] D TCPManager : Registering handler for opcode : 00000001
+[16:16:12] D TCPManager : Registering handler for opcode : 00000005
+[16:16:12] D TCPManager : Registering handler for opcode : 0000000D
+[16:16:12] D TCPManager : Registering handler for opcode : 0000000B
+[16:16:12] D TCPManager : Registering handler for opcode : 00000009
+[16:16:12] D TCPManager : Registering handler for opcode : 00000007
+[16:16:12] I TCPManager : Loading Crypt Handler
+[16:16:12] S TCPManager : Server listening to : 0.0.0.0:8048
+[16:16:12] I ConsoleMgr : Commands list : 
+[16:16:16] N ClientMgr : [-278551127]	| WorldServer-1| 127.0.0.1:6003 | Connected
+[16:16:28] I TCPManager : New Connection : 127.0.0.1:65317
+[16:16:28] D Client : Connexion 127.0.0.1:65317
+[16:16:28] U packethandle : 
+ BA C1 51 A3  3E 42 8D D5  6F 58 5F 0B  CB BA D4 BC  //..Q.>B..oX_.....
+ 05 B1 B4 98  C3 03 F0 E7  02 9A FC 14  01 A3 80 13  //................
+ CA 88 FD AA  0C FF F9 72  21 AB 5D 5E  0E B5 FC C8  //.......r!.]^....
+[16:16:28] U Header : 
+ 26 02                                            //&.                            
+[16:16:28] U Packet : 
+ 08 00 12 10  01 53 21 4D  4A 04 27 B7  B4 59 0F 3E  //.....S!MJ.'..Y.>
+ A7 9D 29 E9  1A 10 49 18  A1 2A 64 E1  DA BD 84 D9  //..)...I..*d.....
+ F4 8A 8B 3C  27 20                                //...<'                     
+[16:16:29] U packethandle : 
+ 0A 20 34 44  42 35 37 32  44 34 30 30  46 30 37 31  //. 4DB572D400F071
+ 43 43 42 46  45 31 43 33  44 30 44 30  46 41 44 39  //CCBFE1C3D0D0FAD9
+ 34 33                                            //43                            
+[16:16:29] U Header : 
+ 02 06                                            //..                            
+[16:16:29] U Packet : 
+ 08 00                                            //..                            
+[16:16:29] U packethandle : 
+ 08 09                                            //..                            
+[16:16:29] D GetAcctProp : recv
+[16:16:29] U Header : 
+ 02 0C                                            //..                            
+[16:16:29] U Packet : 
+ 08 00                                            //..                            
+[16:16:29] D GetAcctProp : sent
+[16:16:29] U packethandle : 
+ 00 0B 00 09                                       //....                        
+[16:16:32] I BaseClient : disconnected  An existing connection was forcibly closed by the remote host
+[16:16:32] D Client : Deconnexion disconnected
+[16:16:45] N ClientMgr : Server disconnected !
+[16:16:45] D RpcClient : Connect : 127.0.0.1:6800
+[16:16:45] D RpcClient : Connecting to : 127.0.0.1

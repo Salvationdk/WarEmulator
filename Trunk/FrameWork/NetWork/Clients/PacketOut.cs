@@ -279,6 +279,23 @@ namespace FrameWork
                 WriteByte(val);
         }
 
+        public virtual void WriteHexStringBytes(string hexString)
+        {
+
+
+            int length = hexString.Length / 2;
+
+            if ((length & 1) == 0)
+            {
+                for (int i = 0; i < length; i++)
+                    WriteByte(Convert.ToByte(hexString.Substring(i * 2, 2), 16));
+            }
+            else
+            {
+                WriteByte(0);
+            }
+        }
+
         public virtual void WritePascalString(string str)
         {
             if (str == null || str.Length <= 0)

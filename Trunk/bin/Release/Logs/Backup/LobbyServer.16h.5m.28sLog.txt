@@ -1,0 +1,50 @@
+[16:03:05] D RpcClient : Connect : 127.0.0.1:6800
+[16:03:05] D RpcClient : Connecting to : 127.0.0.1
+[16:03:05] D RpcClient : Listening on : 127.0.0.1:6002
+[16:03:05] D RpcClient : Registering handlers
+[16:03:05] D RpcClient : Registering : ClientMgr
+[16:03:05] N ClientMgr : [964350733]	| LauncherServer| 127.0.0.1:6001 | Connected
+[16:03:05] S RpcClient : Connected to : 127.0.0.1:6800, Listen on : 127.0.0.1:6002
+[16:03:05] N ClientMgr : Server connected !
+[16:03:05] I TCPManager : Starting...
+[16:03:05] D TCPManager : Allocation of the buffer pool : 300
+[16:03:05] I TCPManager : Loading the Packet Handler
+[16:03:05] D TCPManager : Registering handler for opcode : 00000001
+[16:03:05] D TCPManager : Registering handler for opcode : 00000005
+[16:03:05] D TCPManager : Registering handler for opcode : 0000000D
+[16:03:05] D TCPManager : Registering handler for opcode : 0000000B
+[16:03:05] D TCPManager : Registering handler for opcode : 00000009
+[16:03:05] D TCPManager : Registering handler for opcode : 00000007
+[16:03:05] I TCPManager : Loading Crypt Handler
+[16:03:05] S TCPManager : Server listening to : 0.0.0.0:8048
+[16:03:05] I ConsoleMgr : Commands list : 
+[16:03:09] N ClientMgr : [1138964198]	| WorldServer-1| 127.0.0.1:6003 | Connected
+[16:03:29] I TCPManager : New Connection : 127.0.0.1:64895
+[16:03:29] D Client : Connexion 127.0.0.1:64895
+[16:03:29] U packethandle : 
+ 08 05 10 02  1A 20 6F EF  5D 0A C5 EF  29 07 AF EA  //..... o.]...)...
+ 1C 8A 88 E2  3C 2C B8 58  2B 00 BB CF  B3 A6 BD 50  //....<,.X+......P
+ 94 9B 4A 8E  A5 5F                                //..J.._                    
+[16:03:29] U Header : 
+ 26 02                                            //&.                            
+[16:03:29] U Packet : 
+ 08 00 12 10  01 53 21 4D  4A 04 27 B7  B4 59 0F 3E  //.....S!MJ.'..Y.>
+ A7 9D 29 E9  1A 10 49 18  A1 2A 64 E1  DA BD 84 D9  //..)...I..*d.....
+ F4 8A 8B 3C  27 20                                //...<'                     
+[16:03:30] U packethandle : 
+ 30 21 CE 8B  72 3F BB 69  A4 F6 8B A0  45 FE 56 24  //0!..r?.i....E.V$
+ CB 9A 6C 52  77 B6 D0 B1  C7 E9 A7 01  AF 5C B6 B0  //..lRw........\..
+ B0 48 A5 F7  40 96 71 E9  17 8A F2 AD  89 4A C7 9A  //.H..@.q......J..
+[16:03:30] E TCPManager : Packet handler error :5 Google.ProtocolBuffers.InvalidProtocolBufferException: Protocol message tag had invalid wire type.
+   at Google.ProtocolBuffers.UnknownFieldSet.Builder.MergeFieldFrom(UInt32 tag, ICodedInputStream input) in e:\PrivateServer\protobuf\protobuf-csharp-port-2.4.1.521-source(r523)\protobuf-csharp-port-2.4.1.521-source(r523)\src\ProtocolBuffers\UnknownFieldSet.cs:line 509
+   at Google.ProtocolBuffers.GeneratedBuilder`2.ParseUnknownField(ICodedInputStream input, Builder unknownFields, ExtensionRegistry extensionRegistry, UInt32 tag, String fieldName) in e:\PrivateServer\protobuf\protobuf-csharp-port-2.4.1.521-source(r523)\protobuf-csharp-port-2.4.1.521-source(r523)\src\ProtocolBuffers\GeneratedBuilder.cs:line 90
+   at FrameWork.AuthSessionTokenReq.Builder.MergeFrom(ICodedInputStream input, ExtensionRegistry extensionRegistry) in C:\Users\FN\Documents\GitHub\WarEmulator\Trunk\FrameWork\NetWork\ProtocolBuffers\AuthSessionTokenReqProto.cs:line 283
+   at FrameWork.AuthSessionTokenReq.Builder.MergeFrom(ICodedInputStream input) in C:\Users\FN\Documents\GitHub\WarEmulator\Trunk\FrameWork\NetWork\ProtocolBuffers\AuthSessionTokenReqProto.cs:line 248
+   at Google.ProtocolBuffers.AbstractBuilderLite`2.MergeFrom(Byte[] data) in e:\PrivateServer\protobuf\protobuf-csharp-port-2.4.1.521-source(r523)\protobuf-csharp-port-2.4.1.521-source(r523)\src\ProtocolBuffers\AbstractBuilderLite.cs:line 102
+   at LobbyServer.NetWork.Handler.AuthentificationHandlers.CMSG_AuthSessionTokenReq(BaseClient client, PacketIn packet) in C:\Users\FN\Documents\GitHub\WarEmulator\Trunk\LobbyServer\NetWork\Handler\AuthentificationHandlers.cs:line 70
+   at FrameWork.TCPManager.HandlePacket(BaseClient client, PacketIn Packet) in C:\Users\FN\Documents\GitHub\WarEmulator\Trunk\FrameWork\NetWork\TCPManager.cs:line 630
+[16:03:31] I BaseClient : disconnected  An existing connection was forcibly closed by the remote host
+[16:03:31] D Client : Deconnexion disconnected
+[16:04:51] N ClientMgr : Server disconnected !
+[16:04:51] D RpcClient : Connect : 127.0.0.1:6800
+[16:04:51] D RpcClient : Connecting to : 127.0.0.1

@@ -34,7 +34,7 @@ namespace Launcher
     static public class Client
     {
         static public int Version = 1;
-        static public string IP = "37.110.31.162";
+        static public string IP = "127.0.0.1";
         static public int Port = 8000;
         static public bool Started = false;
 
@@ -415,11 +415,11 @@ namespace Launcher
                         try
                         {
                             string CurrentDir = Directory.GetCurrentDirectory();
+                            patchExe();
                             UpdateWarData();
                             Process Pro = new Process();
                             Pro.StartInfo.FileName = "WAR.exe";
                             Pro.StartInfo.Arguments = " --acctname=" + System.Convert.ToBase64String(ASCIIEncoding.ASCII.GetBytes(User)) + " --sesstoken=" + System.Convert.ToBase64String(ASCIIEncoding.ASCII.GetBytes(Auth));
-                            MessageBox.Show(Auth);
                             Pro.Start();
                             Directory.SetCurrentDirectory(CurrentDir);
                         }
@@ -476,7 +476,30 @@ namespace Launcher
 
             SendTCP(Out);
         }
+        public static void patchExe()
+        {
+            using (Stream stream = new FileStream(Directory.GetCurrentDirectory() + "\\..\\WAR.exe", FileMode.OpenOrCreate))
+            {
 
+                int encryptAddress = (0x00957FBE + 3) - 0x00400000;
+                stream.Seek(encryptAddress, SeekOrigin.Begin);
+                stream.WriteByte(0x01);
+
+
+
+                byte[] decryptPatch1 = { 0x90, 0x90, 0x90, 0x90, 0x57, 0x8B, 0xF8, 0xEB, 0x32 };
+                int decryptAddress1 = (0x009580CB) - 0x00400000;
+                stream.Seek(decryptAddress1, SeekOrigin.Begin);
+                stream.Write(decryptPatch1, 0, 9);
+
+                byte[] decryptPatch2 = { 0x90, 0x90, 0x90, 0x90, 0xEB, 0x08 };
+                int decryptAddress2 = (0x0095814B) - 0x00400000;
+                stream.Seek(decryptAddress2, SeekOrigin.Begin);
+                stream.Write(decryptPatch2, 0, 6);
+
+                //stream.WriteByte(0x01);
+            }
+        }
         static public void UpdateWarData()
         {
             try
@@ -513,6 +536,9 @@ namespace Launcher
                 Print(e.ToString());
             }
         }
+
+
+
 
 
         #endregion

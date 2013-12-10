@@ -245,21 +245,28 @@ namespace WorldServer
             TokInterface.SendAllToks();
             SendSkills();
             Health = TotalHealth;
-            ItmInterface.SendAllItems(this);
+           // ItmInterface.SendAllItems(this);
             AbtInterface.SendAbilities();
+            
 
-            /*PacketOut Out = new PacketOut((byte)Opcodes.F_CHARACTER_INFO);
+
+
+
+           PacketOut Out = new PacketOut((byte)Opcodes.F_CHARACTER_INFO);
             Out.WriteByte(1);
             Out.WriteByte(1);
             Out.WriteUInt16(0x300);
             Out.WriteUInt16(8159);
             Out.WriteByte(1);
-            SendPacket(Out);*/
+            SendPacket(Out);
 
             QtsInterface.SendQuests();
 
             SendInitComplete();
             SocInterface.SendFriends();
+            
+            
+
         }
         public override void Update()
         {
@@ -561,6 +568,13 @@ namespace WorldServer
             Out.WritePascalString(Program.Rm.Name);
             Out.Fill(0, 3);
             SendPacket(Out);
+            
+
+          /*  PacketOut Out = new PacketOut((byte)Opcodes.S_PLAYER_INITTED);
+            Out.WriteHexStringBytes("00CA00000028D5BF1D7F0000000CF824000CAFC7051700020000000000080001001A000000000000084261646C616E6473000000");
+            SendPacket(Out);
+            */
+
         }
         public void SendSkills()
         {

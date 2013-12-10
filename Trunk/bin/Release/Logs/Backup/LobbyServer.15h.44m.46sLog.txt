@@ -1,0 +1,85 @@
+[15:40:10] D RpcClient : Connect : 127.0.0.1:6800
+[15:40:10] D RpcClient : Connecting to : 127.0.0.1
+[15:40:10] D RpcClient : Listening on : 127.0.0.1:6002
+[15:40:10] D RpcClient : Registering handlers
+[15:40:10] D RpcClient : Registering : ClientMgr
+[15:40:10] N ClientMgr : [555398952]	| LauncherServer| 127.0.0.1:6001 | Connected
+[15:40:10] S RpcClient : Connected to : 127.0.0.1:6800, Listen on : 127.0.0.1:6002
+[15:40:10] N ClientMgr : Server connected !
+[15:40:10] I TCPManager : Starting...
+[15:40:10] D TCPManager : Allocation of the buffer pool : 300
+[15:40:10] I TCPManager : Loading the Packet Handler
+[15:40:10] D TCPManager : Registering handler for opcode : 00000001
+[15:40:10] D TCPManager : Registering handler for opcode : 00000005
+[15:40:10] D TCPManager : Registering handler for opcode : 0000000D
+[15:40:10] D TCPManager : Registering handler for opcode : 0000000B
+[15:40:10] D TCPManager : Registering handler for opcode : 00000009
+[15:40:10] D TCPManager : Registering handler for opcode : 00000007
+[15:40:10] I TCPManager : Loading Crypt Handler
+[15:40:10] S TCPManager : Server listening to : 0.0.0.0:8048
+[15:40:10] I ConsoleMgr : Commands list : 
+[15:40:14] N ClientMgr : [-459247552]	| WorldServer-1| 127.0.0.1:6003 | Connected
+[15:41:03] I TCPManager : New Connection : 127.0.0.1:54224
+[15:41:03] D Client : Connexion 127.0.0.1:54224
+[15:41:03] U packethandle : 
+ 08 E5 40 13  DF A6 7B 85  94 1D 9B 94  E7 DE 60 E0  //..@...{.......`.
+ 74 D8 8C AD  18 8A 93 79  F9 F5 C5 61  F7 B0 C6 AD  //t......y...a....
+ 4A EA 78 3F  AF 7F 07 15  BF 2E 5B EC  B2 BD E9 B9  //J.x?.....[.....
+[15:41:03] U Header : 
+ 26 02                                            //&.                            
+[15:41:03] U Packet : 
+ 08 00 12 10  01 53 21 4D  4A 04 27 B7  B4 59 0F 3E  //.....S!MJ.'..Y.>
+ A7 9D 29 E9  1A 10 49 18  A1 2A 64 E1  DA BD 84 D9  //..)...I..*d.....
+ F4 8A 8B 3C  27 20                                //...<'                     
+[15:41:04] U packethandle : 
+ 0A 20 37 35  36 34 35 41  31 33 38 41  36 42 42 43  //. 75645A138A6BBC
+ 37 36 32 44  34 42 41 41  43 42 32 33  45 42 41 33  //762D4BAACB23EBA3
+ 36 31                                            //61                            
+[15:41:04] D AuthSession : session 75645A138A6BBC762D4BAACB23EBA361
+[15:41:04] U Header : 
+ 02 06                                            //..                            
+[15:41:04] U Packet : 
+ 08 00                                            //..                            
+[15:41:04] U packethandle : 
+ 08 09                                            //..                            
+[15:41:04] D GetAcctProp : recv
+[15:41:04] U Header : 
+ 02 0C                                            //..                            
+[15:41:04] U Packet : 
+ 08 00                                            //..                            
+[15:41:04] D GetAcctProp : sent
+[15:41:04] U packethandle : 
+ 00 0B 00 09                                       //....                        
+[15:41:32] I BaseClient : disconnected  An existing connection was forcibly closed by the remote host
+[15:41:32] D Client : Deconnexion disconnected
+[15:41:44] I TCPManager : New Connection : 127.0.0.1:54233
+[15:41:44] D Client : Connexion 127.0.0.1:54233
+[15:41:44] U packethandle : 
+ 51 0F D8 E0  CD 73 E9 4F  31 72 9A 65  CD B6 6D 6C  //Q....s.O1r.e..ml
+ B3 05 8C 75  ED 4B 07 40  AB 22 18 43  63 72 BB 31  //...u.K.@.".Ccr.1
+ 25 CE 1A 2C  52 17 15 20  8A 6E E5 E4  A1 10 E8 11  //%..,R.. .n......
+[15:41:44] U Header : 
+ 26 02                                            //&.                            
+[15:41:44] U Packet : 
+ 08 00 12 10  01 53 21 4D  4A 04 27 B7  B4 59 0F 3E  //.....S!MJ.'..Y.>
+ A7 9D 29 E9  1A 10 49 18  A1 2A 64 E1  DA BD 84 D9  //..)...I..*d.....
+ F4 8A 8B 3C  27 20                                //...<'                     
+[15:41:44] U packethandle : 
+ 0A 20 30 36  42 46 42 34  46 36 42 46  39 38 34 43  //. 06BFB4F6BF984C
+ 33 35 36 43  32 30 38 41  33 30 41 44  45 43 42 45  //356C208A30ADECBE
+ 32 38                                            //28                            
+[15:41:44] D AuthSession : session 06BFB4F6BF984C356C208A30ADECBE28
+[15:41:44] U Header : 
+ 02 06                                            //..                            
+[15:41:44] U Packet : 
+ 08 00                                            //..                            
+[15:41:44] U packethandle : 
+ 08 09                                            //..                            
+[15:41:44] D GetAcctProp : recv
+[15:41:44] U Header : 
+ 02 0C                                            //..                            
+[15:41:44] U Packet : 
+ 08 00                                            //..                            
+[15:41:44] D GetAcctProp : sent
+[15:41:44] U packethandle : 
+ 00 0B 00 09                                       //....                        

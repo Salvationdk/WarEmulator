@@ -1,0 +1,70 @@
+[19:09:39] I DBManager : Registering table: Common.Account
+[19:09:39] I DBManager : Registering table: Common.Realm
+[19:09:40] S RpcServer : Listening on : 127.0.0.1:6800
+[19:09:40] I AddRealm : New Realm : Aps
+[19:09:40] I ConsoleMgr : Commands list : 
+[19:09:40] I ConsoleMgr : .create : New Account <Username,Password>
+[19:09:40] S ServerMgr : [1187302604]	| LauncherServer| 127.0.0.1:6001 | Connected
+[19:09:40] S ServerMgr : [-1947199331]	| LobbyServer| 127.0.0.1:6002 | Connected
+[19:09:44] S ServerMgr : [1803997698]	| WorldServer-1| 127.0.0.1:6003 | Connected
+[19:09:44] I GetRealm : RealmId = 1
+[19:09:48] I GetRealm : RealmId = 1
+[19:09:48] S Realm : Realm (Aps) online at 127.0.0.1:6003
+[19:10:03] I CheckAccount : z : System.Byte[]
+[19:10:03] I GetAccount : z
+[19:10:03] I LoadAccount : z
+[19:10:03] E Cp : .z:z.
+[19:10:03] I GenerateToken : z
+[19:10:03] I GetAccount : z
+[19:10:03] I LoadAccount : z
+[19:10:15] I BuildRealm : Sending 1 realm(s)
+[19:10:19] I GetAccount : z
+[19:10:19] I LoadAccount : z
+[19:10:19] I GetAccount : z
+[19:10:19] I LoadAccount : z
+[19:10:59] I BuildRealm : Sending 1 realm(s)
+[19:11:04] I GetAccount : z
+[19:11:04] I LoadAccount : z
+[19:11:04] I GetAccount : z
+[19:11:04] I LoadAccount : z
+[19:11:45] I CheckAccount : zozooo : System.Byte[]
+[19:11:45] I GetAccount : zozooo
+[19:11:45] I LoadAccount : zozooo
+[19:11:45] E Cp : .zozooo:123.
+[19:11:45] I GenerateToken : zozooo
+[19:11:45] I GetAccount : zozooo
+[19:11:45] I LoadAccount : zozooo
+[19:11:58] I BuildRealm : Sending 1 realm(s)
+[19:12:00] I GetAccount : zozooo
+[19:12:00] I LoadAccount : zozooo
+[19:12:00] I GetAccount : zozooo
+[19:12:00] I LoadAccount : zozooo
+[19:12:18] I GetAccount : zozooo
+[19:12:18] I LoadAccount : zozooo
+[19:12:18] I GetAccount : zozooo
+[19:12:18] I LoadAccount : zozooo
+[19:12:40] I GetAccount : zozooo
+[19:12:40] I LoadAccount : zozooo
+[19:12:40] I GetAccount : zozooo
+[19:12:40] I LoadAccount : zozooo
+[19:13:38] I GetAccount : zozooo
+[19:13:38] I LoadAccount : zozooo
+[19:13:38] I GetAccount : zozooo
+[19:13:38] I LoadAccount : zozooo
+[19:13:52] I GetAccount : zozooo
+[19:13:52] I LoadAccount : zozooo
+[19:13:52] I GetAccount : zozooo
+[19:13:52] I LoadAccount : zozooo
+[19:14:12] I CheckAccount : zozooo : System.Byte[]
+[19:14:12] I GetAccount : zozooo
+[19:14:12] I LoadAccount : zozooo
+[19:14:12] E Cp : .zozooo:123.
+[19:14:12] I GenerateToken : zozooo
+[19:14:12] I GetAccount : zozooo
+[19:14:12] I LoadAccount : zozooo
+[19:14:24] I BuildRealm : Sending 1 realm(s)
+[19:14:26] I GetAccount : zozooo
+[19:14:26] I LoadAccount : zozooo
+[19:14:26] I GetAccount : zozooo
+[19:14:26] I LoadAccount : zozooo
+[19:14:53] I BuildRealm : Sending 1 realm(s)
