@@ -1,9 +1,0 @@
-[23:09:24] S RpcClient : Connected to : 127.0.0.1:6800, Listen on : 127.0.0.1:6001
-[23:09:24] N ClientMgr : Server connected !
-[23:09:24] I TCPManager : Starting...
-[23:09:24] I TCPManager : Loading the Packet Handler
-[23:09:25] I TCPManager : Loading Crypt Handler
-[23:09:25] S TCPManager : Server listening to : 0.0.0.0:8000
-[23:09:25] I ConsoleMgr : Commands list : 
-[23:09:25] N ClientMgr : [697255391]	| LobbyServer| 127.0.0.1:6002 | Connected
-[23:09:29] N ClientMgr : [-764989758]	| WorldServer-1| 127.0.0.1:6003 | Connected
