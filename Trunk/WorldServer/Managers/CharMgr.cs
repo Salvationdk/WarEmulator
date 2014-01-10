@@ -1,22 +1,4 @@
-﻿/*
- * Copyright (C) 2011 APS
- *	http://AllPrivateServer.com
- *
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
- */
- 
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -178,7 +160,7 @@ namespace WorldServer
 
         #region Characters
 
-        static public byte MAX_SLOT = 10;
+        static public byte MAX_SLOT = 20;
         static public int MAX_CHARACTERS = 1000000;
         static public int MAX_CHAR_GUID = 1;
         static public Character[] _Chars = new Character[MAX_CHARACTERS];
@@ -265,82 +247,106 @@ namespace WorldServer
 
             return false;
         }
-        static public byte[] BuildCharacters(int AccountId)
+
+
+        public static byte[] BuildCharactersList(int AccountId)
         {
-            Log.Debug("BuildCharacters", "AcocuntId = " + AccountId);
-
+            Log.Debug("BuildCharactersList", "AcocuntId = " + AccountId);
             Character[] Chars = GetAccountChar(AccountId)._Chars;
-            UInt16 Count = 0;
-
-            // On Compte le nombre de personnages existant du joueur
-            for (UInt16 c = 0; c < Chars.Length; ++c)
-                if (Chars[c] != null) ++Count;
+            int count = 0;
 
             PacketOut Out = new PacketOut(0);
             Out.Position = 0;
-            Out.WriteUInt16(Count);
 
             Character Char = null;
-            for (int i = 0; i < MAX_SLOT; ++i)
+            for (int k = 0; k < MAX_SLOT; ++k)
             {
-                Char = Chars[i];
-
-                if (Char == null)
-                    Out.Write(new byte[280], 0, 280);
-                else
+                Char = Chars[k];
+                if (Char != null)
                 {
                     List<Character_items> Items = CharMgr.GetItemChar(Char.CharacterId);
 
-                    Out.FillString(Char.Name, 48);
-                    Out.WriteByte(Char.Value[0].Level);
-                    Out.WriteByte(Char.Career);
-                    Out.WriteByte(Char.Realm);
-                    Out.WriteByte(Char.Sex);
-                    Out.WriteByte(Char.ModelId);
-                    Out.WriteUInt16(Char.Value[0].ZoneId);
-                    Out.Write(new byte[5], 0, 5);
+                    /****  char slot start ****/
+                    Out.FillString(Char.Name, 48); // name
+                    Out.WriteByte(Char.Value[0].Level); // Level
+                    Out.WriteByte(Char.Career); //career
+                    Out.WriteByte(Char.Realm); // realm
+                    Out.WriteByte(Char.Sex); // gender
+                    Out.WriteUInt16R(Char.ModelId); //model id
+                    Out.WriteUInt16R(Char.Value[0].ZoneId); // zone id
+                    Out.Fill(0, 12); // unk
 
                     Character_items Item = null;
                     for (UInt16 SlotId = 14; SlotId < 30; ++SlotId)
                     {
                         Item = Items.Find(item => item != null && item.SlotId == SlotId);
+
                         if (Item == null)
-                            Out.WriteUInt32(0);
+                        {
+                            Out.WriteInt32(0);
+                            Out.WriteInt32(0);
+                        }
                         else
-                            Out.WriteUInt32R(Item.ModelId);
+                        {
 
-                        Out.Write(new byte[4], 0, 4);
+                            Out.WriteInt32((int)Item.ModelId);
+                            Out.WriteUInt16R(0); // primary dye
+                            Out.WriteUInt16R(0); // secondary dye
+                        }
                     }
-
-                    Out.Write(new byte[6], 0, 6);
-
-                    for (int j = 0; j < 5; ++j)
+                    Out.WriteUInt32(0x00); // 0x00000000
+                    for (int i = 0; i < 4; i++)
                     {
-                        Out.Write(new byte[6], 0, 6);
-                        Out.WriteUInt16(0xFF00);
+                        Out.WriteUInt32(0xFF000000);
+                        Out.WriteUInt32(0x00);
                     }
+                    Out.WriteUInt32(0xFF000000);
 
+                    //weapons
                     for (UInt16 SlotId = 10; SlotId < 13; ++SlotId)
                     {
                         Item = Items.Find(item => item != null && item.SlotId == SlotId);
-                        Out.WriteUInt16(0);
-                        if (Item == null)
-                            Out.WriteUInt16(0);
-                        else
-                            Out.WriteUInt16R((ushort)Item.ModelId);
-                    }
 
-                    Out.Write(new byte[10], 0, 10);
+                        if (Item == null)
+                            Out.WriteUInt32(0);
+                        else
+                        {
+                            Out.WriteUInt16R((ushort)Item.ModelId);
+                            Out.WriteUInt16(0);
+                        }
+                    }
+                    Out.Fill(0, 8);
                     Out.WriteUInt16(0xFF00);
                     Out.WriteByte(0);
-                    Out.WriteByte(Char.Race);
-                    Out.WriteUInt16(0);
+                    Out.WriteByte(Char.Race); // char slot position
+                    Out.WriteUInt16(0x00); //unk
+
+                   /* //Traits [8 bytes]
+                    Out.WriteByte(1); //face
+                    Out.WriteByte(4); //jewel   
+                    Out.WriteByte(4); //scar   
+                    Out.WriteByte(0); //hair
+                    Out.WriteByte(3); //hair color   
+                    Out.WriteByte(2); //skin color
+                    Out.WriteByte(0); //eye color
+                    Out.WriteByte(5); //metal color
+                    */
                     Out.Write(Char.bTraits, 0, Char.bTraits.Length);
-                    Out.Write(new byte[10], 0, 10);
+
+                    Out.Fill(0, 14); //unk
+
+                    count++;
                 }
             }
+
+            for (int i = 0; i < (MAX_SLOT - count); ++i)
+                Out.Write(new byte[284], 0, 284);
+
             return Out.ToArray();
+
+
         }
+
         static public GameData.Realms GetAccountRealm(int AccountId)
         {
             return GetAccountChar(AccountId)._Realm;

@@ -39,15 +39,6 @@ namespace AccountCacher
         {
             AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(onError);
 
-            Log.Texte("", "-------------------------------", ConsoleColor.DarkBlue);
-            Log.Texte("", "          _____   _____ ", ConsoleColor.Cyan);
-            Log.Texte("", "    /\\   |  __ \\ / ____|", ConsoleColor.Cyan);
-            Log.Texte("", "   /  \\  | |__) | (___  ", ConsoleColor.Cyan);
-            Log.Texte("", "  / /\\ \\ |  ___/ \\___ \\ ", ConsoleColor.Cyan);
-            Log.Texte("", " / ____ \\| |     ____) |", ConsoleColor.Cyan);
-            Log.Texte("", "/_/    \\_\\_|    |_____/ Warhammer", ConsoleColor.Cyan);
-            Log.Texte("", "http://AllPrivateServer.com", ConsoleColor.DarkCyan);
-            Log.Texte("", "-------------------------------", ConsoleColor.DarkBlue);
 
             // Loading all configs files
             ConfigMgr.LoadConfigs();

@@ -1,0 +1,24 @@
+[22:48:29] I DBManager : Registering table: Common.Account
+[22:48:29] I DBManager : Registering table: Common.Realm
+[22:48:29] S RpcServer : Listening on : 127.0.0.1:6800
+[22:48:29] I AddRealm : New Realm : Aps
+[22:48:29] I ConsoleMgr : Commands list : 
+[22:48:29] I ConsoleMgr : .create : New Account <Username,Password>
+[22:48:30] S ServerMgr : [-1735163896]	| LauncherServer| 127.0.0.1:6001 | Connected
+[22:48:30] S ServerMgr : [-1164470906]	| LobbyServer| 127.0.0.1:6002 | Connected
+[22:48:34] S ServerMgr : [2146728542]	| WorldServer-1| 127.0.0.1:6003 | Connected
+[22:48:34] I GetRealm : RealmId = 1
+[22:48:38] I GetRealm : RealmId = 1
+[22:48:38] S Realm : Realm (Aps) online at 127.0.0.1:6003
+[22:48:38] I CheckAccount : z : System.Byte[]
+[22:48:38] I GetAccount : z
+[22:48:38] I LoadAccount : z
+[22:48:38] E Cp : .z:z.
+[22:48:38] I GenerateToken : z
+[22:48:38] I GetAccount : z
+[22:48:38] I LoadAccount : z
+[22:48:48] I BuildRealm : Sending 1 realm(s)
+[22:48:48] I GetAccount : z
+[22:48:48] I LoadAccount : z
+[22:48:48] I GetAccount : z
+[22:48:48] I LoadAccount : z
